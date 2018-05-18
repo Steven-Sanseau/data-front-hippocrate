@@ -1,0 +1,33 @@
+{
+  "name": "data-hippocrate",
+  "description": "Hippocratic Oath for Data Scientist",
+  "version": "0.1.0",
+  "author": "Steven Sanséau <steven.sanseau@gmail.com>",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.5.1",
+    "gatsby": "^1.9.247",
+    "gatsby-cli": "^1.1.51",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-plugin-styled-components": "^2.0.11",
+    "gatsby-source-strapi": "^0.0.3",
+    "react-helmet": "^5.2.0",
+    "rebass": "^2.0.0-2",
+    "styled-components": "^3.2.6",
+    "styled-system": "^2.2.5"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.12.0"
+  }
+}
