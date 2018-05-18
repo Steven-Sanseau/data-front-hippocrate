@@ -9,7 +9,6 @@ class SupporterList extends Component {
     }
   }
   componentDidMount = () => {
-    request()
     const method = 'GET'
     const requestURL = `${process.env.API_URL}/supporter`
 
