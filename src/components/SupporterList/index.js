@@ -11,7 +11,7 @@ class SupporterList extends Component {
   componentDidMount = () => {
     request()
     const method = 'GET'
-    const requestURL = `http://localhost:1337/supporter`
+    const requestURL = `${process.env.API_URL}/supporter`
 
     return request(requestURL, { method })
       .catch(err => {

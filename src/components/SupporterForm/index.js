@@ -24,7 +24,7 @@ class SupporterForm extends Component {
   newSupporter = e => {
     e.preventDefault()
     const method = 'POST'
-    const requestURL = `http://localhost:1337/supporter`
+    const requestURL = `${process.env.API_URL}/supporter`
 
     const body = {
       first_name: this.state.firstName,
