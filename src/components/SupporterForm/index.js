@@ -13,6 +13,9 @@ class SupporterForm extends Component {
       linkedInHandle: '',
       twitterHandle: '',
       errorMessage: null,
+      show_error: false,
+      error: false,
+      errorInput: {},
     }
     this.newSupporter = this.newSupporter.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -26,6 +29,10 @@ class SupporterForm extends Component {
   newSupporter = e => {
     e.preventDefault()
 
+    if (!this.validateForm()) {
+      return false
+    }
+
     const method = 'POST'
     const requestURL = `${process.env.API_URL}/supporter`
     const body = {
@@ -37,28 +44,41 @@ class SupporterForm extends Component {
     }
 
     return request(requestURL, { method, body: body })
-      .catch(err => {
-        console.log('err', err.response)
-        this.setState({ errorMessage: err.response.payload.message })
-      })
       .then(newSupporter => {
         this.props.pushNewSupporter(newSupporter)
-        this.clearForm()
+        return this.clearForm()
+      })
+      .catch(err => {
+        return this.setState({
+          errorMessage: `Impossible d'enregistrer cette signature, le signataire ${
+            body.first_name
+          } ${body.last_name} semble déjà existé !`,
+          show_error: true,
+        })
       })
   }
 
-  validateForm = () => {}
+  validateForm = () => {
+    const { firstName, lastName, email } = this.state
+    let error = {}
+    let isValid = true
 
-  validateInput = input => {
-    if (input.name === 'email') {
-      input.value
+    if (firstName === '') {
+      error.firstName = 'Veuillez entrer votre Prénom'
+      isValid = false
     }
-    switch (input.name) {
-      case 'email': {
-        if (input.value === '') {
-        }
-      }
+
+    if (lastName === '') {
+      error.lastName = 'Veuillez entrer votre Nom'
+      isValid = false
     }
+
+    if (email === '') {
+      error.email = 'Veuillez entrer votre Email'
+      isValid = false
+    }
+    this.setState({ errorInput: error })
+    return isValid
   }
 
   clearForm = () => {
@@ -79,6 +99,7 @@ class SupporterForm extends Component {
       linkedInHandle,
       twitterHandle,
       errorMessage,
+      show_error,
     } = this.state
     return (
       <Box>
@@ -91,16 +112,28 @@ class SupporterForm extends Component {
               value={firstName}
               onChange={this.handleChange}
             />
+            {this.state.errorInput.firstName && (
+              <Text color="red" fontSize={12}>
+                {this.state.errorInput.firstName}
+              </Text>
+            )}
           </Label>
 
           <Label>
-            Nom
-            <Input
-              placeholder="Doe"
-              value={lastName}
-              name="lastName"
-              onChange={this.handleChange}
-            />
+            <Box>Nom</Box>
+            <Box>
+              <Input
+                placeholder="Doe"
+                value={lastName}
+                name="lastName"
+                onChange={this.handleChange}
+              />
+            </Box>
+            {this.state.errorInput.lastName && (
+              <Text color="red" fontSize={12}>
+                {this.state.errorInput.lastName}
+              </Text>
+            )}
           </Label>
 
           <Label>
@@ -111,6 +144,11 @@ class SupporterForm extends Component {
               onChange={this.handleChange}
               value={email}
             />
+            {this.state.errorInput.email && (
+              <Text color="red" fontSize={12}>
+                {this.state.errorInput.email}
+              </Text>
+            )}
           </Label>
 
           <Label>
@@ -139,9 +177,10 @@ class SupporterForm extends Component {
             bg="grey"
             type="submit"
           >
-            Signer le sermont
+            Signer le serment
           </Button>
-          {errorMessage && <Text color="red">{errorMessage}</Text>}
+          {errorMessage &&
+            show_error && <Text color="red">{errorMessage}</Text>}
         </form>
       </Box>
     )

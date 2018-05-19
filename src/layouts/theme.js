@@ -11,9 +11,9 @@ const theme = {
   },
   colors: {
     grey: '#666167',
-    dark_grey: '#2B2B2B',
+    dark_grey: '#2A2B39',
     light_grey: '#4A4A4A',
-    dark_blue: '#002b45',
+    dark_blue: '#2A2B39',
     light_blue: '#5E65C7',
   },
   radii: [0, 2, 4],

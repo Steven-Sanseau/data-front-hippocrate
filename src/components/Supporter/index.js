@@ -25,7 +25,6 @@ class Supporter extends Component {
 
     return request(requestURL, { method })
       .catch(err => {
-        console.log('err', err.response)
         //  TODO: Handle errors
       })
       .then(res => {
@@ -35,7 +34,6 @@ class Supporter extends Component {
 
   addSupporter = newSupporter => {
     const { supporters } = this.state
-    console.log(newSupporter)
     if (newSupporter === undefined) {
       return
     }
