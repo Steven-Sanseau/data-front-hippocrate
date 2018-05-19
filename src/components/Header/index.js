@@ -10,7 +10,13 @@ const Header = () => (
       <NavLink href="/team" mx="1em" color="dark_blue">
         Qui sommes nous ?
       </NavLink>
-      <NavLink color="dark_blue">Data for good</NavLink>
+      <NavLink
+        href="http://www.dataforgood.fr/?utm_source=hippocrate_batch4&utm_campaign=heading_website"
+        target="_blank"
+        color="dark_blue"
+      >
+        Data for good
+      </NavLink>
     </Toolbar>
   </header>
 )

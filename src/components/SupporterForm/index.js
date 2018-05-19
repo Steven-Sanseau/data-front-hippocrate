@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Input, Label, Box } from 'rebass'
+import PropTypes from 'prop-types'
+import { Input, Label, Box, Text, Button } from 'rebass'
 import request from '../../utils/request'
 
 class SupporterForm extends Component {
@@ -11,6 +12,7 @@ class SupporterForm extends Component {
       email: '',
       linkedInHandle: '',
       twitterHandle: '',
+      errorMessage: null,
     }
     this.newSupporter = this.newSupporter.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -18,14 +20,14 @@ class SupporterForm extends Component {
 
   handleChange = e => {
     e.preventDefault()
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value, errorMessage: null })
   }
 
   newSupporter = e => {
     e.preventDefault()
+
     const method = 'POST'
     const requestURL = `${process.env.API_URL}/supporter`
-
     const body = {
       first_name: this.state.firstName,
       last_name: this.state.lastName,
@@ -33,14 +35,40 @@ class SupporterForm extends Component {
       linkedin_handle: this.state.linkedInHandle || '',
       twitter_handle: this.state.twitterHandle || '',
     }
+
     return request(requestURL, { method, body: body })
       .catch(err => {
         console.log('err', err.response)
-        //  TODO: Handle errors
+        this.setState({ errorMessage: err.response.payload.message })
       })
-      .finally(() => {
-        console.log('coucou')
+      .then(newSupporter => {
+        this.props.pushNewSupporter(newSupporter)
+        this.clearForm()
       })
+  }
+
+  validateForm = () => {}
+
+  validateInput = input => {
+    if (input.name === 'email') {
+      input.value
+    }
+    switch (input.name) {
+      case 'email': {
+        if (input.value === '') {
+        }
+      }
+    }
+  }
+
+  clearForm = () => {
+    this.setState({
+      firstName: '',
+      lastName: '',
+      email: '',
+      linkedInHandle: '',
+      twitterHandle: '',
+    })
   }
 
   render() {
@@ -50,6 +78,7 @@ class SupporterForm extends Component {
       email,
       linkedInHandle,
       twitterHandle,
+      errorMessage,
     } = this.state
     return (
       <Box>
@@ -103,13 +132,24 @@ class SupporterForm extends Component {
               value={twitterHandle}
             />
           </Label>
-          <button type="submit">GOGOGOGO</button>
+          <Button
+            radius={3}
+            cursor="pointer"
+            color="white"
+            bg="grey"
+            type="submit"
+          >
+            Signer le sermont
+          </Button>
+          {errorMessage && <Text color="red">{errorMessage}</Text>}
         </form>
       </Box>
     )
   }
 }
 
-SupporterForm.propTypes = {}
+SupporterForm.propTypes = {
+  pushNewSupporter: PropTypes.func,
+}
 
 export default SupporterForm
