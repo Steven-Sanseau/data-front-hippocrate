@@ -4,22 +4,29 @@ import Description from './Description'
 import Number from './Number'
 import Title from './Title'
 import Underline from './Underline'
+import UnderlineText from '../UnderlineText'
 
 const Preamble = () => (
   <div>
-    <Box>
-      <Text>
-        En tant que <strong>professionnel(le)</strong> amené(e) à
-      </Text>
-      <Text>
-        collecter, stocker, traiter, modéliser, analyser des données et/ou à
-        concevoir des algorithmes, des produits informatiques ou des interfaces,
-      </Text>
-      <Text>
-        je suis conscient(e) de l’impact que peut avoir mon travail sur des
-        individus et sur la société dans son ensemble
-      </Text>
-      <Box mx={-2} my={3} p={4} bg="grey_background" borderColor="grey_border">
+    <Box mt={[1, 6]}>
+      <Flex wrap justifyContent="center">
+        <Box width={['100%', '60%']} style={{ fontFamily: 'Roboto' }}>
+          <Text>
+            En tant que <strong>professionnel(le)</strong> amené(e) à
+          </Text>
+          <Text mt={3}>
+            collecter, stocker, traiter, modéliser, analyser des données et/ou à
+            concevoir des algorithmes, des produits informatiques ou des
+            interfaces,
+          </Text>
+          <Text mt={3}>
+            je suis conscient(e) de <UnderlineText text="l’impact" /> que peut
+            avoir mon travail sur des individus et sur la société dans son
+            ensemble
+          </Text>
+        </Box>
+      </Flex>
+      <Box mx={-2} my={5} p={4} bg="grey_background" borderColor="grey_border">
         <Flex justifyContent="center">
           <Box width={['100%', '80%', '60%']}>
             <Description>
@@ -108,20 +115,30 @@ const Preamble = () => (
         </Flex>
       </Box>
     </Box>
-    <Text>Pour mettre en application ces principes au quotidien,</Text>
-    <Text>Data for Good a rédigé la check-list éthique ci-dessous.</Text>
-
-    <Text>
-      C’est une série de questions qu’on propose de se poser à chaque étape du
-      travail (en entreprise, en recherche ou en administration),
-    </Text>
-
-    <Text>
-      pour tenter de ne pas faire de mal quand on travaille avec les nombres et
-      les données
-    </Text>
+    <Box mt={[1, 5]}>
+      <Flex wrap justifyContent="center">
+        <Box
+          width={['100%', '60%']}
+          style={{ fontFamily: 'Roboto' }}
+          fontSize="16"
+        >
+          <Text>
+            Pour mettre en application ces principes au quotidien, Data for Good
+            a rédigé la <UnderlineText text="check-list éthique" /> ci-dessous.
+          </Text>
+          <Text mt={3}>
+            C’est une série de questions qu’on propose de se poser à chaque
+            étape du travail (en entreprise, en recherche ou en administration),
+          </Text>
+          <Text mt={3}>
+            pour tenter de <UnderlineText text="ne pas faire de mal" /> quand on
+            travaille avec les nombres et les données
+          </Text>
+        </Box>
+      </Flex>
+    </Box>
     <Relative>
-      <Absolute m={-2} left={0}>
+      <Absolute m={-2} left={0} top={-160}>
         <Image src={'/static/hand.png'} />
       </Absolute>
     </Relative>

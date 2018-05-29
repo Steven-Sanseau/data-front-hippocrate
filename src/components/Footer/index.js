@@ -1,7 +1,7 @@
 import React from 'react'
 import { Flex, Box, Text, Link } from 'rebass'
 const Footer = () => (
-  <Flex justifyContent="center">
+  <Flex justifyContent="center" mt={5}>
     <Text
       color="dark_blue"
       textAlign="center"

@@ -15,10 +15,10 @@ const IndexPage = ({ data }) => (
     <Preamble />
 
     <Flex flexWrap="wrap" justifyContent="center">
-      <Box p={3} mt="14em" width={[1, 2 / 3]}>
+      <Box p={3} width={[1, '60%']}>
         {data.allStrapiStep.edges.map(step => <Step step={step} />)}
       </Box>
-      <Box p={3} width={[1, 2 / 3]}>
+      <Box width={1}>
         <Supporter />
       </Box>
     </Flex>

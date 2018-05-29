@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Input, Label, Box, Text, Button } from 'rebass'
+import { Label, Flex, Box, Text } from 'rebass'
+import InputText from './InputText'
 import request from '../../utils/request'
+import ButtonPrimary from '../Button'
 
 class SupporterForm extends Component {
   constructor(props) {
@@ -102,88 +104,99 @@ class SupporterForm extends Component {
       show_error,
     } = this.state
     return (
-      <Box>
-        <form onSubmit={this.newSupporter}>
-          <Label>
-            Prénom
-            <Input
-              placeholder="John"
-              name="firstName"
-              value={firstName}
-              onChange={this.handleChange}
-            />
-            {this.state.errorInput.firstName && (
-              <Text color="red" fontSize={12}>
-                {this.state.errorInput.firstName}
-              </Text>
-            )}
-          </Label>
+      <Box bg="grey_background">
+        <Flex justifyContent="center">
+          <Box width={[1, '50%']} p={4}>
+            <form onSubmit={this.newSupporter}>
+              <Flex wrap justifyContent="left">
+                <Box width={1}>
+                  <Flex wrap>
+                    <Box width={[1, '45%']} mx={3} my={3}>
+                      <Label color="violet_text">
+                        Prénom*
+                        <InputText
+                          placeholder="John"
+                          name="firstName"
+                          value={firstName}
+                          onChange={this.handleChange}
+                        />
+                      </Label>
+                      {this.state.errorInput.firstName && (
+                        <Text color="red" fontSize={12}>
+                          {this.state.errorInput.firstName}
+                        </Text>
+                      )}
+                    </Box>
 
-          <Label>
-            <Box>Nom</Box>
-            <Box>
-              <Input
-                placeholder="Doe"
-                value={lastName}
-                name="lastName"
-                onChange={this.handleChange}
-              />
-            </Box>
-            {this.state.errorInput.lastName && (
-              <Text color="red" fontSize={12}>
-                {this.state.errorInput.lastName}
-              </Text>
-            )}
-          </Label>
+                    <Box width={[1, '45%']} mx={3} my={3}>
+                      <Label color="violet_text">
+                        Nom*
+                        <InputText
+                          placeholder="Doe"
+                          value={lastName}
+                          name="lastName"
+                          onChange={this.handleChange}
+                        />
+                      </Label>
+                      {this.state.errorInput.lastName && (
+                        <Text color="red" fontSize={12}>
+                          {this.state.errorInput.lastName}
+                        </Text>
+                      )}
+                    </Box>
+                  </Flex>
+                </Box>
+                <Box width={[1, '90%']} mx={3} my={3}>
+                  <Label color="violet_text">
+                    Email*
+                    <InputText
+                      placeholder="john@protonmail.com"
+                      name="email"
+                      onChange={this.handleChange}
+                      value={email}
+                    />
+                    {this.state.errorInput.email && (
+                      <Text color="red" fontSize={12}>
+                        {this.state.errorInput.email}
+                      </Text>
+                    )}
+                  </Label>
+                </Box>
+                <Box width={[1, '90%']} mx={3} my={3}>
+                  <Label color="violet_text">
+                    LinkedIn Profile
+                    <InputText
+                      placeholder="https://www.linkedin.com/in/hippocrate/"
+                      name="linkedInHandle"
+                      onChange={this.handleChange}
+                      value={linkedInHandle}
+                    />
+                  </Label>
+                  <Label my={3} color="violet_text">
+                    Twitter Profile
+                    <InputText
+                      placeholder="https://twitter.com/Hippocrate"
+                      name="twitterHandle"
+                      onChange={this.handleChange}
+                      value={twitterHandle}
+                    />
+                  </Label>
+                </Box>
+                <Box width={1}>
+                  <Text color="violet_text" fontWeight="300" fontSize={14}>
+                    * champs obligatoire
+                  </Text>
+                </Box>
+                <Box mx="auto">
+                  <ButtonPrimary type="submit">Je signe</ButtonPrimary>
+                </Box>
+              </Flex>
 
-          <Label>
-            Email
-            <Input
-              placeholder="john@protonmail.com"
-              name="email"
-              onChange={this.handleChange}
-              value={email}
-            />
-            {this.state.errorInput.email && (
-              <Text color="red" fontSize={12}>
-                {this.state.errorInput.email}
-              </Text>
-            )}
-          </Label>
-
-          <Label>
-            LinkedIn Profile
-            <Input
-              placeholder="https://www.linkedin.com/in/hippocrate/"
-              name="linkedInHandle"
-              onChange={this.handleChange}
-              value={linkedInHandle}
-            />
-          </Label>
-
-          <Label>
-            Twitter Profile
-            <Input
-              placeholder="https://twitter.com/Hippocrate"
-              name="twitterHandle"
-              onChange={this.handleChange}
-              value={twitterHandle}
-            />
-          </Label>
-          <Button
-            p="20em"
-            radius={3}
-            color="white"
-            bg="dark_blue"
-            type="submit"
-            height={90}
-            fontSize={50}
-          >
-            Signer le serment
-          </Button>
-          {errorMessage &&
-            show_error && <Text color="red">{errorMessage}</Text>}
-        </form>
+              {errorMessage &&
+                show_error && <Text color="red">{errorMessage}</Text>}
+            </form>
+          </Box>
+        </Flex>
       </Box>
     )
   }

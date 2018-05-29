@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, Box, Flex, Button } from 'rebass'
+import { Text, Box, Flex } from 'rebass'
+import ButtonPrimary from '../Button'
 import SupporterForm from '../SupporterForm'
 import SupporterList from '../SupporterList'
 import request from '../../utils/request'
@@ -48,20 +49,20 @@ class Supporter extends Component {
   render() {
     const { showForm } = this.state
     return (
-      <Box id="supporter">
+      <Box id="supporter" mt={5} mx={-2}>
         {!showForm && (
-          <Flex alignItems="center">
+          <Flex justifyContent="center">
             <Box>
-              <Button
+              <ButtonPrimary
                 onClick={this.toggleForm}
                 radius={3}
                 color="white"
-                bg="blue"
+                bg="dark_blue"
                 fontSize={50}
                 p={10}
               >
                 Je Signe
-              </Button>
+              </ButtonPrimary>
             </Box>
           </Flex>
         )}

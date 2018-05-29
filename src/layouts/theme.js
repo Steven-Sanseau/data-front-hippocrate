@@ -20,6 +20,7 @@ const theme = {
     light_blue: '#5E65C7',
     violet: '#868BD8',
     violet_text: '#00098E',
+    supporter_grey: '#666167',
   },
   radii: [0, 2, 4],
 }
