@@ -1,10 +1,5 @@
 import React from 'react'
 import { Image, Flex, Box, Text } from 'rebass'
-const ImageGlasses = Image.extend``
-
-const ImageHippocrate = Image.extend`
-  opacity: 0.2;
-`
 
 const Jumbotron = () => (
   <Flex mx={-2} justifyContent="center" wrap>
@@ -41,13 +36,13 @@ const Jumbotron = () => (
       </Text>
     </Box>
     <Box width={[1, 1 / 2]} px={2}>
-      <ImageHippocrate
+      <Image
         ml="2em"
-        opacity={0.2}
+        style={{ opacity: 0.2 }}
         width={['100%', '25%']}
         src="/static/hippocrate.png"
       />
-      <ImageGlasses
+      <Image
         width={['100%', '14.5%']}
         mt="-17.5%"
         ml="8.1%"
