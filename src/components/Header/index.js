@@ -4,8 +4,11 @@ import { NavLink, Toolbar } from 'rebass'
 const Header = () => (
   <header>
     <Toolbar mb="4em">
-      <NavLink href="/#supporter" ml="auto" color="dark_blue">
+      <NavLink href="/#serment" ml="auto" color="dark_blue">
         Signer le serment
+      </NavLink>
+      <NavLink href="/presse" ml="auto" color="dark_blue">
+        Presse
       </NavLink>
       <NavLink href="/team" mx="1em" color="dark_blue">
         Qui sommes nous ?

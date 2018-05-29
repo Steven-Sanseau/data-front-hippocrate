@@ -1,20 +1,26 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import FillFooter from '../Svg/FillFooter'
-import { Relative, Absolute, Box } from 'rebass'
-
+import { Flex, Box, Text, Link } from 'rebass'
 const Footer = () => (
-  <div>
-    <Relative>
-      <Absolute top={0} left={0}>
-        <FillFooter />
-      </Absolute>
-    </Relative>
-    <Box>
-      Ce projet a été porté dans le cadre de la saison d’accélération de
-      l’association Data For Good
-    </Box>
-  </div>
+  <Flex justifyContent="center">
+    <Text
+      color="dark_blue"
+      textAlign="center"
+      fontSize={14}
+      style={{ opacity: 0.7, fontFamily: 'Roboto' }}
+    >
+      Ce projet est porté dans le cadre de la saison d’accélération de
+      l’association{' '}
+      <Link color="dark_blue" href="http://www.dataforgood.fr/" target="_blank">
+        Data For Good
+      </Link>
+      <br />
+      Des mises à jour régulières sont prévues. Pour toute suggestion, merci de
+      contacter{' '}
+      <Link color="dark_blue" href="mailto:hippocrate.tech@gmail.com">
+        hippocrate.tech@gmail.com
+      </Link>.
+    </Text>
+  </Flex>
 )
 
 export default Footer

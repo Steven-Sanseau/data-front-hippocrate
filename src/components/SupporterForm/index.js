@@ -171,11 +171,13 @@ class SupporterForm extends Component {
             />
           </Label>
           <Button
+            p="20em"
             radius={3}
-            cursor="pointer"
             color="white"
-            bg="grey"
+            bg="dark_blue"
             type="submit"
+            height={90}
+            fontSize={50}
           >
             Signer le serment
           </Button>

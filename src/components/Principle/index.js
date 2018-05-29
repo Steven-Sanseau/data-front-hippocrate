@@ -1,12 +1,22 @@
 import React from 'react'
 import { Text, Box } from 'rebass'
+import { themeGet } from 'styled-system'
+import Markdown from 'react-remarkable'
+
+const TextPrinciple = Text.extend`
+  margin-bottom: 20px;
+  margin-left: 10%;
+  font-size: 14px;
+  color: ${themeGet('colors.dark_grey')};
+  font-family: Roboto;
+`
 
 const Principle = ({ principle }) => (
   <div>
     <Box key={principle.id}>
-      <Text mb={20} ml="10%" fontSize={14} color="grey">
-        ... {principle.title}
-      </Text>
+      <TextPrinciple>
+        <Markdown source={`... ${principle.title}`} />
+      </TextPrinciple>
     </Box>
   </div>
 )
