@@ -52,12 +52,12 @@ const Layout = ({ children, data }) => (
               'hippocrate, data, science, serment hippocrate, data science',
           },
           {
-            name: 'og:title',
+            name: 'og:image',
             content: '/static/share_image.png',
           },
         ]}
       >
-        <title />
+        <title>Serment d'Hippocrate pour Data Scientist</title>
         <link
           rel="icon"
           type="image/png"
