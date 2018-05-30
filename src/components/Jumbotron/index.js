@@ -52,7 +52,7 @@ export default class Jumbotron extends Component {
             Data for Good propose un
           </Text>
           <Text
-            textAlign="right"
+            textAlign={['center', 'right']}
             fontSize={45}
             fontWeight={700}
             color="dark_grey"
@@ -72,12 +72,12 @@ export default class Jumbotron extends Component {
             …ou pour toute personne travaillant avec la donnée
           </Text>
         </Box>
-        <Box width={[1, 1 / 2]} px={2}>
+        <Box width={[0, 1 / 2]} px={2}>
           <Box onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
             <Image
               ml="2em"
               style={{ opacity: 0.2 }}
-              width={['100%', '25%']}
+              width={['100%', '200px']}
               src="/static/hippocrate.png"
             />
             <Image

@@ -57,7 +57,7 @@ const Layout = ({ children, data }) => (
           },
         ]}
       >
-        <title>{data.site.siteMetadata.title}</title>
+        <title />
         <link
           rel="icon"
           type="image/png"

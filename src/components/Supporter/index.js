@@ -59,7 +59,9 @@ class Supporter extends Component {
                 color="white"
                 bg="dark_blue"
                 fontSize={50}
-                p={10}
+                mt={[4, 3]}
+                px={['30px', '90px']}
+                py={'20px'}
               >
                 Je Signe
               </ButtonPrimary>

@@ -35,7 +35,7 @@ export default class IndexPage extends Component {
     const { data } = this.state
     return (
       <main>
-        <Header siteTitle={this.props.data.site.siteMetadata.title} />
+        <Header />
         <Jumbotron />
         <Preamble />
 
@@ -55,13 +55,3 @@ export default class IndexPage extends Component {
     )
   }
 }
-
-export const IndexQuery = graphql`
-  query IndexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

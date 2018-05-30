@@ -54,7 +54,7 @@ class SupporterForm extends Component {
         return this.setState({
           errorMessage: `Impossible d'enregistrer cette signature, le signataire ${
             body.first_name
-          } ${body.last_name} semble déjà existé !`,
+          } ${body.last_name} semble déjà exister !`,
           show_error: true,
         })
       })
@@ -111,7 +111,11 @@ class SupporterForm extends Component {
               <Flex flexWrap="wrap" justifyContent="left">
                 <Box width={1}>
                   <Flex wrap>
-                    <Box width={[1, '45%']} mx={3} my={3}>
+                    <Box
+                      width={['100%', '100%', '100%', '42%']}
+                      mx={[0, 3]}
+                      my={3}
+                    >
                       <Label color="violet_text">
                         Prénom*
                         <InputText
@@ -122,13 +126,22 @@ class SupporterForm extends Component {
                         />
                       </Label>
                       {this.state.errorInput.firstName && (
-                        <Text color="red" fontSize={12}>
+                        <Text
+                          color="red"
+                          fontSize={12}
+                          textAlign="right"
+                          fontWeight={300}
+                        >
                           {this.state.errorInput.firstName}
                         </Text>
                       )}
                     </Box>
 
-                    <Box width={[1, '45%']} mx={3} my={3}>
+                    <Box
+                      width={['100%', '100%', '100%', '42%']}
+                      mx={[0, '28px']}
+                      my={3}
+                    >
                       <Label color="violet_text">
                         Nom*
                         <InputText
@@ -139,14 +152,19 @@ class SupporterForm extends Component {
                         />
                       </Label>
                       {this.state.errorInput.lastName && (
-                        <Text color="red" fontSize={12}>
+                        <Text
+                          color="red"
+                          textAlign="right"
+                          fontSize={12}
+                          fontWeight={300}
+                        >
                           {this.state.errorInput.lastName}
                         </Text>
                       )}
                     </Box>
                   </Flex>
                 </Box>
-                <Box width={[1, '90%']} mx={3} my={3}>
+                <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                   <Label color="violet_text">
                     Email*
                     <InputText
@@ -155,16 +173,21 @@ class SupporterForm extends Component {
                       onChange={this.handleChange}
                       value={email}
                     />
-                    {this.state.errorInput.email && (
-                      <Text color="red" fontSize={12}>
-                        {this.state.errorInput.email}
-                      </Text>
-                    )}
                   </Label>
+                  {this.state.errorInput.email && (
+                    <Text
+                      color="red"
+                      fontSize={12}
+                      textAlign="right"
+                      fontWeight={300}
+                    >
+                      {this.state.errorInput.email}
+                    </Text>
+                  )}
                 </Box>
-                <Box width={[1, '90%']} mx={3} my={3}>
+                <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                   <Label color="violet_text">
-                    LinkedIn Profile
+                    LinkedIn
                     <InputText
                       placeholder="https://www.linkedin.com/in/hippocrate/"
                       name="linkedInHandle"
@@ -172,8 +195,10 @@ class SupporterForm extends Component {
                       value={linkedInHandle}
                     />
                   </Label>
-                  <Label my={3} color="violet_text">
-                    Twitter Profile
+                </Box>
+                <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
+                  <Label color="violet_text">
+                    Twitter
                     <InputText
                       placeholder="https://twitter.com/Hippocrate"
                       name="twitterHandle"
@@ -188,12 +213,23 @@ class SupporterForm extends Component {
                   </Text>
                 </Box>
                 <Box mx="auto">
-                  <ButtonPrimary type="submit">Je signe</ButtonPrimary>
+                  <ButtonPrimary
+                    mt={[4, 3]}
+                    px={['30px', '90px']}
+                    py={'20px'}
+                    type="submit"
+                  >
+                    Je signe
+                  </ButtonPrimary>
                 </Box>
               </Flex>
 
               {errorMessage &&
-                show_error && <Text color="red">{errorMessage}</Text>}
+                show_error && (
+                  <Text color="red" textAlign="center" fontWeight={300} mt={3}>
+                    {errorMessage}
+                  </Text>
+                )}
             </form>
           </Box>
         </Flex>

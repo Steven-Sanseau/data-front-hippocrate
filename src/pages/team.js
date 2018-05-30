@@ -6,7 +6,7 @@ import TeamCard from '../components/TeamCard'
 
 const TeamPage = ({ data }) => (
   <main>
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header />
     <Flex mx={-2} justifyContent="center">
       <Box width={[1, '40%']} px={2}>
         <Text color="dark_grey" textAlign="left" fontSize={16} fontWeight={300}>
@@ -88,11 +88,6 @@ export const IndexQuery = graphql`
           avatar
           position
         }
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
   }

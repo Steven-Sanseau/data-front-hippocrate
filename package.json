@@ -20,6 +20,7 @@
     "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-source-strapi": "^0.0.3",
     "graphql-tag": "^2.9.2",
+    "hidden-styled": "^1.0.0-0",
     "isomorphic-unfetch": "^2.0.0",
     "npm-check-updates": "^2.14.2",
     "react-helmet": "^5.2.0",
@@ -29,9 +30,7 @@
     "styled-system": "^2.2.5",
     "whatwg-fetch": "^2.0.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

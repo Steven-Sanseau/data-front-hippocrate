@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink, Toolbar, Link } from 'rebass'
+import Hide from 'hidden-styled'
 
 const Header = () => (
   <header>
@@ -19,16 +20,17 @@ const Header = () => (
       >
         Qui sommes nous ?
       </NavLink>
-      <NavLink
-        hidden={['true', 'false']}
-        href="http://www.dataforgood.fr/?utm_source=hippocrate_batch4&utm_campaign=heading_website"
-        target="_blank"
-        ml="1em"
-        color="dark_grey"
-        fontWeight="300"
-      >
-        Data for good
-      </NavLink>
+      <Hide xs>
+        <NavLink
+          href="http://www.dataforgood.fr/?utm_source=hippocrate_batch4&utm_campaign=heading_website"
+          target="_blank"
+          ml="1em"
+          color="dark_grey"
+          fontWeight="300"
+        >
+          Data for good
+        </NavLink>
+      </Hide>
     </Toolbar>
   </header>
 )

@@ -3,7 +3,7 @@ import { themeGet } from 'styled-system'
 
 const ButtonPrimary = Button.extend`
   font-size: 50px;
-  padding: 10px 90px;
+  line-height: 50px;
   text-align: center;
   color: white;
   background-color: ${themeGet('colors.dark_blue')};

@@ -5,7 +5,7 @@ import Header from '../components/Header'
 
 const PressePage = ({ data }) => (
   <main>
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header />
     <Flex mx={-2} justifyContent="center">
       <Box width={[1, '40%']} px={2}>
         <Text
@@ -78,13 +78,3 @@ const PressePage = ({ data }) => (
 )
 
 export default PressePage
-
-export const IndexQuery = graphql`
-  query indexQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
