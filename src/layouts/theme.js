@@ -7,7 +7,7 @@ const theme = {
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
   weights: {
-    normal: 400,
+    normal: 300,
     bold: 700,
   },
   colors: {

@@ -10,16 +10,16 @@ const Preamble = () => (
   <div>
     <Box mt={[1, 6]}>
       <Flex wrap justifyContent="center">
-        <Box width={['100%', '60%']} style={{ fontFamily: 'Roboto' }}>
-          <Text>
+        <Box width={['100%', '60%']} fontWeight={300}>
+          <Text fontWeight={300}>
             En tant que <strong>professionnel(le)</strong> amené(e) à
           </Text>
-          <Text mt={3}>
+          <Text mt={3} fontWeight={300}>
             collecter, stocker, traiter, modéliser, analyser des données et/ou à
             concevoir des algorithmes, des produits informatiques ou des
             interfaces,
           </Text>
-          <Text mt={3}>
+          <Text mt={3} fontWeight={300}>
             je suis conscient(e) de <UnderlineText text="l’impact" /> que peut
             avoir mon travail sur des individus et sur la société dans son
             ensemble.
@@ -116,11 +116,7 @@ const Preamble = () => (
     </Box>
     <Box mt={[1, 5]}>
       <Flex wrap justifyContent="center">
-        <Box
-          width={['100%', '60%']}
-          style={{ fontFamily: 'Roboto' }}
-          fontSize="16"
-        >
+        <Box width={['100%', '60%']} fontSize="16">
           <Text>
             Pour mettre en application ces principes au quotidien, Data for Good
             a rédigé la <UnderlineText text="check-list éthique" /> ci-dessous.

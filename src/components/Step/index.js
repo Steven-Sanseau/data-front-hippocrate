@@ -10,7 +10,7 @@ const Step = ({ step }) => (
       {step.node.title}
       <Underline />
     </Title>
-    <Text color="dark_blue" ml="1%" fontSize={14} fontWeight="300">
+    <Text color="dark_blue" fontSize={16} fontWeight="300">
       Je m'engage à …
     </Text>
 

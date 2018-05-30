@@ -5,10 +5,12 @@ import Markdown from 'react-remarkable'
 
 const TextPrinciple = Text.extend`
   margin-bottom: 20px;
-  margin-left: 10%;
-  font-size: 14px;
+  margin-left: 11.4%;
+  font-size: 16px;
   color: ${themeGet('colors.dark_grey')};
-  font-family: Roboto;
+  font-family: Circular;
+  font-weight: 300;
+  line-height: 24px;
 `
 
 const Principle = ({ principle }) => (
