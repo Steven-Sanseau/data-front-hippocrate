@@ -29,6 +29,7 @@ export default class IndexPage extends Component {
     })
 
     this.setState({ data })
+    console.log(this.state)
   }
 
   render() {

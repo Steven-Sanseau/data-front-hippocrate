@@ -6,13 +6,15 @@ export const GET_STEP = gql`
       _id
       title
       order
-      principle {
+      principle(sort: "order") {
         _id
         title
-        detail {
+        order
+        detail(sort: "order") {
           _id
           title
           text
+          order
         }
       }
     }
