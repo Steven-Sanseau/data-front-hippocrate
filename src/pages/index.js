@@ -3,6 +3,7 @@ import { Text, Box, Flex } from 'rebass'
 
 import client from '../utils/client'
 import { GET_STEP } from '../query'
+import 'regenerator-runtime/runtime'
 
 import Header from '../components/Header'
 import Jumbotron from '../components/Jumbotron'
@@ -22,14 +23,12 @@ export default class IndexPage extends Component {
     }
   }
 
-  componentDidMount() {
-    client
-      .query({
-        query: GET_STEP,
-      })
-      .then(result => {
-        this.setState({ data: result.data })
-      })
+  async componentDidMount() {
+    const { data } = await client.query({
+      query: GET_STEP,
+    })
+
+    this.setState({ data })
   }
 
   render() {
