@@ -9,6 +9,7 @@ const TextDetails = Text.extend`
   font-size: 16px;
   color: ${themeGet('colors.dark_grey')};
   font-family: Circular;
+  opacity: 0.7;
   font-weight: 300;
   line-height: 24px;
 `
@@ -17,14 +18,16 @@ const TextTitle = Text.extend`
   margin-bottom: 20px;
   margin-left: 12.4%;
   font-size: 16px;
-  color: ${themeGet('colors.dark_grey')};
-  font-family: Circular;
+  color: ${themeGet('colors.supporter_grey')};
   font-weight: 300;
   line-height: 24px;
 `
 
 const TextMore = Text.extend`
   cursor: pointer;
+  color: ${themeGet('colors.supporter_grey')};
+  text-decoration: underline;
+  font-weight: 300;
 `
 
 export default class Detail extends Component {
@@ -50,12 +53,13 @@ export default class Detail extends Component {
     const { isOpen } = this.state
     return (
       <Box>
-        <TextTitle>{detail.title}</TextTitle>
-
-        <TextMore color="dark_blue" onClick={this.toggleShowDetail}>
-          {!isOpen && <span>Lire la suite</span>}
-          {isOpen && <span>Lire moins</span>}
-        </TextMore>
+        <TextTitle>
+          {detail.title}{' '}
+          <TextMore is="span" color="dark_blue" onClick={this.toggleShowDetail}>
+            {!isOpen && <span>Lire la suite</span>}
+            {isOpen && <span>Lire moins</span>}
+          </TextMore>
+        </TextTitle>
 
         {isOpen && <TextDetails>{detail.text}</TextDetails>}
       </Box>

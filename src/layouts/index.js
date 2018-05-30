@@ -31,7 +31,7 @@ injectGlobal`
      font-weight: 900;
      src: url('/static/font/circular/CircularStd-Black.otf') format("opentype");
   }
-     
+
   ::selection {
     color: #fff;
     background: #878BC8;
@@ -41,7 +41,6 @@ const Layout = ({ children, data }) => (
   <div>
     <Provider theme={theme}>
       <Helmet
-        title={data.site.siteMetadata.title}
         meta={[
           {
             name: 'description',
@@ -53,7 +52,15 @@ const Layout = ({ children, data }) => (
               'hippocrate, data, science, serment hippocrate, data science',
           },
         ]}
-      />
+      >
+        <title>{data.site.siteMetadata.title}</title>
+        <link
+          rel="icon"
+          type="image/png"
+          href="/static/hippocrate.ico"
+          sizes="16x16"
+        />
+      </Helmet>
       {children()}
     </Provider>
   </div>
