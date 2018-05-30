@@ -51,6 +51,10 @@ const Layout = ({ children, data }) => (
             content:
               'hippocrate, data, science, serment hippocrate, data science',
           },
+          {
+            name: 'og:title',
+            content: '/static/share_image.png',
+          },
         ]}
       >
         <title>{data.site.siteMetadata.title}</title>

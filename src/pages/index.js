@@ -22,12 +22,14 @@ export default class IndexPage extends Component {
     }
   }
 
-  async componentDidMount() {
-    const { data } = await client.query({
-      query: GET_STEP,
-    })
-
-    this.setState({ data })
+  componentDidMount() {
+    client
+      .query({
+        query: GET_STEP,
+      })
+      .then(result => {
+        this.setState({ data: result.data })
+      })
   }
 
   render() {
@@ -40,7 +42,9 @@ export default class IndexPage extends Component {
 
         <Flex flexWrap="wrap" justifyContent="center">
           <Box p={3} width={[1, '60%']}>
-            {data.steps.map(step => <Step key={step._id} step={step} />)}
+            {!data.loading &&
+              data.steps &&
+              data.steps.map(step => <Step key={step._id} step={step} />)}
           </Box>
           <Box width={1}>
             <Supporter />
