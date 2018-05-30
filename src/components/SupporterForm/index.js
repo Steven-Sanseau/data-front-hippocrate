@@ -14,6 +14,7 @@ class SupporterForm extends Component {
       email: '',
       linkedInHandle: '',
       twitterHandle: '',
+      githubHandle: '',
       errorMessage: null,
       show_error: false,
       error: false,
@@ -44,6 +45,7 @@ class SupporterForm extends Component {
       email: this.state.email,
       linkedin_handle: this.state.linkedInHandle || '',
       twitter_handle: this.state.twitterHandle || '',
+      github_handle: this.state.githubHandle || '',
     }
 
     return request(requestURL, { method, body: body })
@@ -92,6 +94,7 @@ class SupporterForm extends Component {
       email: '',
       linkedInHandle: '',
       twitterHandle: '',
+      githubHandle: '',
     })
   }
 
@@ -102,6 +105,7 @@ class SupporterForm extends Component {
       email,
       linkedInHandle,
       twitterHandle,
+      githubHandle,
       errorMessage,
       show_error,
       isSubmited,
@@ -191,9 +195,9 @@ class SupporterForm extends Component {
                   </Box>
                   <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                     <Label color="violet_text">
-                      LinkedIn
+                      linkedin.com/in/
                       <InputText
-                        placeholder="https://www.linkedin.com/in/hippocrate/"
+                        placeholder="handle"
                         name="linkedInHandle"
                         onChange={this.handleChange}
                         value={linkedInHandle}
@@ -202,12 +206,23 @@ class SupporterForm extends Component {
                   </Box>
                   <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                     <Label color="violet_text">
-                      Twitter
+                      twitter.com/
                       <InputText
-                        placeholder="https://twitter.com/Hippocrate"
+                        placeholder="handle"
                         name="twitterHandle"
                         onChange={this.handleChange}
                         value={twitterHandle}
+                      />
+                    </Label>
+                  </Box>
+                  <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
+                    <Label color="violet_text">
+                      github.com/
+                      <InputText
+                        placeholder="handle"
+                        name="githubHandle"
+                        onChange={this.handleChange}
+                        value={githubHandle}
                       />
                     </Label>
                   </Box>
