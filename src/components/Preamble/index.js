@@ -22,7 +22,7 @@ const Preamble = () => (
           <Text mt={3}>
             je suis conscient(e) de <UnderlineText text="l’impact" /> que peut
             avoir mon travail sur des individus et sur la société dans son
-            ensemble
+            ensemble.
           </Text>
         </Box>
       </Flex>
@@ -75,10 +75,9 @@ const Preamble = () => (
             </Flex>
             <Description>
               Je veillerai à toujours m’assurer que des individus ne sont pas
-              discriminés par rapport à des critères illégaux, de façon directe
-              ou indirecte, sur la base de mes travaux sur les
-              données.J’exploiterai les données avec toute la rigueur requise et
-              en conformité avec les meilleurs standards de ma profession.
+              discriminés par rapport à des critères illégaux ou illégitimes, de
+              façon directe ou indirecte, sur la base de mes travaux sur les
+              données.
             </Description>
 
             {/*Fourth ELEMENT*/}
@@ -126,13 +125,13 @@ const Preamble = () => (
             Pour mettre en application ces principes au quotidien, Data for Good
             a rédigé la <UnderlineText text="check-list éthique" /> ci-dessous.
           </Text>
-          <Text mt={3}>
+          <Text mt={1}>
             C’est une série de questions qu’on propose de se poser à chaque
             étape du travail (en entreprise, en recherche ou en administration),
           </Text>
           <Text mt={3}>
             pour tenter de <UnderlineText text="ne pas faire de mal" /> quand on
-            travaille avec les nombres et les données
+            travaille avec les nombres et les données.
           </Text>
         </Box>
       </Flex>
