@@ -7,7 +7,7 @@ const LinkInline = Link.extend`
 
 const SupporterList = ({ supporters }) => (
   <Flex justifyContent="center" mt={5}>
-    <Box width={[1, '60%']}>
+    <Box width={['90%', '60%']}>
       <Text color="dark_blue" fontSize={30} fontWeight={400}>
         Ils ont signé:{' '}
       </Text>
@@ -16,7 +16,7 @@ const SupporterList = ({ supporters }) => (
           supporters.map(supporter => (
             <Box key={supporter._id} width={[1, 1 / 3]}>
               <Flex>
-                <Box width="90%">
+                <Box width="90%" mt={[3, 1]}>
                   <Text
                     textAlign="center"
                     color="supporter_grey"
@@ -26,7 +26,7 @@ const SupporterList = ({ supporters }) => (
                     {supporter.first_name} {supporter.last_name}
                   </Text>
                 </Box>
-                <Box width="10%">
+                <Box width="10%" mt={[3, 1]}>
                   {supporter.linkedin_handle && (
                     <LinkInline
                       href={`https://www.linkedin.com/in/${

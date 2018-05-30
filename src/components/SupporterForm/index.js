@@ -18,6 +18,7 @@ class SupporterForm extends Component {
       show_error: false,
       error: false,
       errorInput: {},
+      isSubmited: false,
     }
     this.newSupporter = this.newSupporter.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -48,6 +49,7 @@ class SupporterForm extends Component {
     return request(requestURL, { method, body: body })
       .then(newSupporter => {
         this.props.pushNewSupporter(newSupporter)
+        this.setState({ isSubmited: true })
         return this.clearForm()
       })
       .catch(err => {
@@ -102,135 +104,148 @@ class SupporterForm extends Component {
       twitterHandle,
       errorMessage,
       show_error,
+      isSubmited,
     } = this.state
     return (
       <Box bg="grey_background">
         <Flex justifyContent="center">
           <Box width={[1, '50%']} p={4}>
-            <form onSubmit={this.newSupporter}>
-              <Flex flexWrap="wrap" justifyContent="left">
-                <Box width={1}>
-                  <Flex wrap>
-                    <Box
-                      width={['100%', '100%', '100%', '42%']}
-                      mx={[0, 3]}
-                      my={3}
-                    >
-                      <Label color="violet_text">
-                        Prénom*
-                        <InputText
-                          placeholder="John"
-                          name="firstName"
-                          value={firstName}
-                          onChange={this.handleChange}
-                        />
-                      </Label>
-                      {this.state.errorInput.firstName && (
-                        <Text
-                          color="red"
-                          fontSize={12}
-                          textAlign="right"
-                          fontWeight={300}
-                        >
-                          {this.state.errorInput.firstName}
-                        </Text>
-                      )}
-                    </Box>
+            {!isSubmited && (
+              <form onSubmit={this.newSupporter}>
+                <Flex flexWrap="wrap" justifyContent="left">
+                  <Box width={1}>
+                    <Flex>
+                      <Box
+                        width={['100%', '100%', '100%', '42%']}
+                        mx={[0, 3]}
+                        my={3}
+                      >
+                        <Label color="violet_text">
+                          Prénom*
+                          <InputText
+                            placeholder="John"
+                            name="firstName"
+                            value={firstName}
+                            onChange={this.handleChange}
+                          />
+                        </Label>
+                        {this.state.errorInput.firstName && (
+                          <Text
+                            color="red"
+                            fontSize={12}
+                            textAlign="right"
+                            fontWeight={300}
+                          >
+                            {this.state.errorInput.firstName}
+                          </Text>
+                        )}
+                      </Box>
 
-                    <Box
-                      width={['100%', '100%', '100%', '42%']}
-                      mx={[0, '28px']}
-                      my={3}
+                      <Box
+                        width={['100%', '100%', '100%', '42%']}
+                        mx={[0, '28px']}
+                        my={3}
+                      >
+                        <Label color="violet_text">
+                          Nom*
+                          <InputText
+                            placeholder="Doe"
+                            value={lastName}
+                            name="lastName"
+                            onChange={this.handleChange}
+                          />
+                        </Label>
+                        {this.state.errorInput.lastName && (
+                          <Text
+                            color="red"
+                            textAlign="right"
+                            fontSize={12}
+                            fontWeight={300}
+                          >
+                            {this.state.errorInput.lastName}
+                          </Text>
+                        )}
+                      </Box>
+                    </Flex>
+                  </Box>
+                  <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
+                    <Label color="violet_text">
+                      Email*
+                      <InputText
+                        placeholder="john@protonmail.com"
+                        name="email"
+                        onChange={this.handleChange}
+                        value={email}
+                      />
+                    </Label>
+                    {this.state.errorInput.email && (
+                      <Text
+                        color="red"
+                        fontSize={12}
+                        textAlign="right"
+                        fontWeight={300}
+                      >
+                        {this.state.errorInput.email}
+                      </Text>
+                    )}
+                  </Box>
+                  <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
+                    <Label color="violet_text">
+                      LinkedIn
+                      <InputText
+                        placeholder="https://www.linkedin.com/in/hippocrate/"
+                        name="linkedInHandle"
+                        onChange={this.handleChange}
+                        value={linkedInHandle}
+                      />
+                    </Label>
+                  </Box>
+                  <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
+                    <Label color="violet_text">
+                      Twitter
+                      <InputText
+                        placeholder="https://twitter.com/Hippocrate"
+                        name="twitterHandle"
+                        onChange={this.handleChange}
+                        value={twitterHandle}
+                      />
+                    </Label>
+                  </Box>
+                  <Box width={1}>
+                    <Text color="violet_text" fontWeight="300" fontSize={14}>
+                      * champs obligatoire
+                    </Text>
+                  </Box>
+                  <Box mx="auto">
+                    <ButtonPrimary
+                      mt={[4, 3]}
+                      px={['30px', '90px']}
+                      py={'20px'}
+                      type="submit"
                     >
-                      <Label color="violet_text">
-                        Nom*
-                        <InputText
-                          placeholder="Doe"
-                          value={lastName}
-                          name="lastName"
-                          onChange={this.handleChange}
-                        />
-                      </Label>
-                      {this.state.errorInput.lastName && (
-                        <Text
-                          color="red"
-                          textAlign="right"
-                          fontSize={12}
-                          fontWeight={300}
-                        >
-                          {this.state.errorInput.lastName}
-                        </Text>
-                      )}
-                    </Box>
-                  </Flex>
-                </Box>
-                <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
-                  <Label color="violet_text">
-                    Email*
-                    <InputText
-                      placeholder="john@protonmail.com"
-                      name="email"
-                      onChange={this.handleChange}
-                      value={email}
-                    />
-                  </Label>
-                  {this.state.errorInput.email && (
+                      Je signe
+                    </ButtonPrimary>
+                  </Box>
+                </Flex>
+
+                {errorMessage &&
+                  show_error && (
                     <Text
                       color="red"
-                      fontSize={12}
-                      textAlign="right"
+                      textAlign="center"
                       fontWeight={300}
+                      mt={3}
                     >
-                      {this.state.errorInput.email}
+                      {errorMessage}
                     </Text>
                   )}
-                </Box>
-                <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
-                  <Label color="violet_text">
-                    LinkedIn
-                    <InputText
-                      placeholder="https://www.linkedin.com/in/hippocrate/"
-                      name="linkedInHandle"
-                      onChange={this.handleChange}
-                      value={linkedInHandle}
-                    />
-                  </Label>
-                </Box>
-                <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
-                  <Label color="violet_text">
-                    Twitter
-                    <InputText
-                      placeholder="https://twitter.com/Hippocrate"
-                      name="twitterHandle"
-                      onChange={this.handleChange}
-                      value={twitterHandle}
-                    />
-                  </Label>
-                </Box>
-                <Box width={1}>
-                  <Text color="violet_text" fontWeight="300" fontSize={14}>
-                    * champs obligatoire
-                  </Text>
-                </Box>
-                <Box mx="auto">
-                  <ButtonPrimary
-                    mt={[4, 3]}
-                    px={['30px', '90px']}
-                    py={'20px'}
-                    type="submit"
-                  >
-                    Je signe
-                  </ButtonPrimary>
-                </Box>
-              </Flex>
-
-              {errorMessage &&
-                show_error && (
-                  <Text color="red" textAlign="center" fontWeight={300} mt={3}>
-                    {errorMessage}
-                  </Text>
-                )}
-            </form>
+              </form>
+            )}
+            {isSubmited && (
+              <Text textAlign="center" fontSize="20px">
+                Merci de votre signature !
+              </Text>
+            )}
           </Box>
         </Flex>
       </Box>

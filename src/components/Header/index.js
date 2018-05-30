@@ -5,7 +5,7 @@ import Hide from 'hidden-styled'
 const Header = () => (
   <header>
     <Toolbar mb="4em">
-      <NavLink href="/#serment" ml="auto" color="dark_grey" fontWeight="600">
+      <NavLink href="/" ml="auto" color="dark_grey" fontWeight="600">
         Signer le serment
       </NavLink>
       <NavLink href="/presse" ml="1em" color="dark_grey" fontWeight="300">
