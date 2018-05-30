@@ -108,7 +108,7 @@ class SupporterForm extends Component {
         <Flex justifyContent="center">
           <Box width={[1, '50%']} p={4}>
             <form onSubmit={this.newSupporter}>
-              <Flex wrap justifyContent="left">
+              <Flex flexWrap="wrap" justifyContent="left">
                 <Box width={1}>
                   <Flex wrap>
                     <Box width={[1, '45%']} mx={3} my={3}>

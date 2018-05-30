@@ -5,16 +5,18 @@ import Title from './Title'
 import Underline from './Underline'
 
 const Step = ({ step }) => (
-  <Box key={step.node.id}>
+  <Box key={step._id}>
     <Title>
-      {step.node.title}
+      {step.title}
       <Underline />
     </Title>
     <Text color="dark_blue" fontSize={16} fontWeight="300">
       Je m'engage à …
     </Text>
 
-    {step.node.principle.map(principle => <Principle principle={principle} />)}
+    {step.principle.map(principle => (
+      <Principle key={principle._id} principle={principle} />
+    ))}
   </Box>
 )
 

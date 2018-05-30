@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Text, Box, Flex } from 'rebass'
+
+import client from '../utils/client'
+import { GET_STEP } from '../query'
 
 import Header from '../components/Header'
 import Jumbotron from '../components/Jumbotron'
@@ -8,42 +11,50 @@ import Step from '../components/Step'
 import Footer from '../components/Footer'
 import Supporter from '../components/Supporter'
 
-const IndexPage = ({ data }) => (
-  <main>
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <Jumbotron />
-    <Preamble />
+export default class IndexPage extends Component {
+  constructor(props) {
+    super(props)
 
-    <Flex flexWrap="wrap" justifyContent="center">
-      <Box p={3} width={[1, '60%']}>
-        {data.allStrapiStep.edges.map(step => <Step step={step} />)}
-      </Box>
-      <Box width={1}>
-        <Supporter />
-      </Box>
-    </Flex>
+    this.state = {
+      data: {
+        steps: [],
+      },
+    }
+  }
 
-    <Footer />
-  </main>
-)
+  async componentDidMount() {
+    const { data } = await client.query({
+      query: GET_STEP,
+    })
 
-export default IndexPage
+    this.setState({ data })
+  }
+
+  render() {
+    const { data } = this.state
+    return (
+      <main>
+        <Header siteTitle={this.props.data.site.siteMetadata.title} />
+        <Jumbotron />
+        <Preamble />
+
+        <Flex flexWrap="wrap" justifyContent="center">
+          <Box p={3} width={[1, '60%']}>
+            {data.steps.map(step => <Step key={step._id} step={step} />)}
+          </Box>
+          <Box width={1}>
+            <Supporter />
+          </Box>
+        </Flex>
+
+        <Footer />
+      </main>
+    )
+  }
+}
 
 export const IndexQuery = graphql`
   query IndexQuery {
-    allStrapiStep(sort: { fields: [order], order: ASC }) {
-      edges {
-        node {
-          id
-          title
-          order
-          principle {
-            id
-            title
-          }
-        }
-      }
-    }
     site {
       siteMetadata {
         title

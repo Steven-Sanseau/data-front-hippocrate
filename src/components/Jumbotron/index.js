@@ -3,8 +3,19 @@ import { Image, Flex, Box, Text } from 'rebass'
 import anime from 'animejs'
 
 export default class Jumbotron extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      glassesAnim: {},
+    }
+
+    this.mouseEnter = this.mouseEnter.bind(this)
+    this.mouseLeave = this.mouseLeave.bind(this)
+  }
+
   componentDidMount = () => {
-    const cssProperties = anime({
+    const anim = anime({
       targets: '#glasses',
       // marginTop: '-17.5%',
       translateY: 104,
@@ -12,11 +23,23 @@ export default class Jumbotron extends Component {
       easing: 'linear',
       duration: 1500,
     })
+
+    this.setState({
+      glassesAnim: anim,
+    })
+  }
+
+  mouseEnter = () => {
+    this.state.glassesAnim.reverse()
+  }
+
+  mouseLeave = () => {
+    this.state.glassesAnim.reverse()
   }
 
   render() {
     return (
-      <Flex mx={-2} justifyContent="center" wrap>
+      <Flex mx={-2} justifyContent="center">
         <Box width={[1, 1 / 2]} px={2}>
           <Text
             color="dark_grey"
@@ -50,20 +73,22 @@ export default class Jumbotron extends Component {
           </Text>
         </Box>
         <Box width={[1, 1 / 2]} px={2}>
-          <Image
-            ml="2em"
-            style={{ opacity: 0.2 }}
-            width={['100%', '25%']}
-            src="/static/hippocrate.png"
-          />
-          <Image
-            width={['100%', '14.5%']}
-            style={{ opacity: 0 }}
-            mt="-30%"
-            ml="8.1%"
-            src="/static/glasses.png"
-            id="glasses"
-          />
+          <Box onMouseEnter={this.mouseEnter} onMouseLeave={this.mouseLeave}>
+            <Image
+              ml="2em"
+              style={{ opacity: 0.2 }}
+              width={['100%', '25%']}
+              src="/static/hippocrate.png"
+            />
+            <Image
+              width={['100%', '14.5%']}
+              style={{ opacity: 0 }}
+              mt="-30%"
+              ml="8.1%"
+              src="/static/glasses.png"
+              id="glasses"
+            />
+          </Box>
         </Box>
       </Flex>
     )

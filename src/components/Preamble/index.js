@@ -9,7 +9,7 @@ import UnderlineText from '../UnderlineText'
 const Preamble = () => (
   <div>
     <Box mt={[1, 6]}>
-      <Flex wrap justifyContent="center">
+      <Flex justifyContent="center">
         <Box width={['100%', '60%']} fontWeight={300}>
           <Text fontWeight={300}>
             En tant que <strong>professionnel(le)</strong> amené(e) à
@@ -115,7 +115,7 @@ const Preamble = () => (
       </Box>
     </Box>
     <Box mt={[1, 5]}>
-      <Flex wrap justifyContent="center">
+      <Flex justifyContent="center">
         <Box width={['100%', '60%']} fontSize="16">
           <Text>
             Pour mettre en application ces principes au quotidien, Data for Good

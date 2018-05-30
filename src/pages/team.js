@@ -7,7 +7,7 @@ import TeamCard from '../components/TeamCard'
 const TeamPage = ({ data }) => (
   <main>
     <Header siteTitle={data.site.siteMetadata.title} />
-    <Flex mx={-2} justifyContent="center" wrap>
+    <Flex mx={-2} justifyContent="center">
       <Box width={[1, '40%']} px={2}>
         <Text color="dark_grey" textAlign="left" fontSize={16} fontWeight={300}>
           Nous sommes une équipe de <strong>bénévoles</strong> rassemblés dans
@@ -69,7 +69,7 @@ const TeamPage = ({ data }) => (
     </Flex>
     <Flex flexWrap="wrap" justifyContent="space-around" mt={5}>
       {data.allStrapiTeam.edges.map(member => (
-        <TeamCard width={[1, 1 / 5]} teamMember={member} />
+        <TeamCard key={member.id} width={[1, 1 / 5]} teamMember={member} />
       ))}
     </Flex>
 

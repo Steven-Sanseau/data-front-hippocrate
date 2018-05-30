@@ -1,0 +1,3 @@
+{
+  "lookupPaths": ["node_modules/rebass/src/*.js", "app/src/components"]
+}

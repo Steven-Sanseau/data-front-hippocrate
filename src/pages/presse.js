@@ -6,7 +6,7 @@ import Header from '../components/Header'
 const PressePage = ({ data }) => (
   <main>
     <Header siteTitle={data.site.siteMetadata.title} />
-    <Flex mx={-2} justifyContent="center" wrap>
+    <Flex mx={-2} justifyContent="center">
       <Box width={[1, '40%']} px={2}>
         <Text
           color="dark_grey"
