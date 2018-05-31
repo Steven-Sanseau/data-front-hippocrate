@@ -5,6 +5,7 @@ import Number from './Number'
 import Title from './Title'
 import Underline from './Underline'
 import UnderlineText from '../UnderlineText'
+import Hide from 'hidden-styled'
 
 const Preamble = () => (
   <div>
@@ -132,11 +133,13 @@ const Preamble = () => (
         </Box>
       </Flex>
     </Box>
-    <Relative>
-      <Absolute m={-2} left={0} top={-160}>
-        <Image src={'/static/hand.png'} />
-      </Absolute>
-    </Relative>
+    <Hide xs>
+      <Relative>
+        <Absolute m={-2} left={0} top={-160}>
+          <Image src={'/static/hand.png'} />
+        </Absolute>
+      </Relative>
+    </Hide>
   </div>
 )
 

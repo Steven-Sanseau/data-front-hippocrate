@@ -12,7 +12,7 @@ const SupporterList = ({ supporters }) => (
   <Flex justifyContent="center" mt={5}>
     <Box width={['90%', '60%']}>
       <Text color="dark_blue" fontSize={30} fontWeight={400}>
-        Ils ont signé:{' '}
+        Ils ont signé :
       </Text>
       <Flex flexWrap="wrap" justifyContent="center" mt={4}>
         {supporters &&

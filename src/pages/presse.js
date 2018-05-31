@@ -3,9 +3,9 @@ import { Flex, Box, Text, Image, Link } from 'rebass'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-const PressePage = ({ data }) => (
+const PressePage = ({ data, location }) => (
   <main>
-    <Header />
+    <Header location={location} />
     <Flex mx={-2} justifyContent="center">
       <Box width={[1, '40%']} px={2}>
         <Text

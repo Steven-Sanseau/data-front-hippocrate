@@ -4,9 +4,9 @@ import Footer from '../components/Footer'
 import { Flex, Box, Text, Image, Link } from 'rebass'
 import TeamCard from '../components/TeamCard'
 
-const TeamPage = ({ data }) => (
+const TeamPage = ({ data, location }) => (
   <main>
-    <Header />
+    <Header location={location} />
     <Flex mx={-2} justifyContent="center">
       <Box width={[1, '40%']} px={2}>
         <Text color="dark_grey" textAlign="left" fontSize={16} fontWeight={300}>

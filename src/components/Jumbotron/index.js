@@ -21,7 +21,7 @@ export default class Jumbotron extends Component {
       translateY: 104,
       opacity: '1',
       easing: 'linear',
-      duration: 1500,
+      duration: 300,
     })
 
     this.setState({
@@ -30,7 +30,14 @@ export default class Jumbotron extends Component {
   }
 
   mouseEnter = () => {
-    this.state.glassesAnim.reverse()
+    this.state.glassesAnim = anime({
+      targets: '#glasses',
+      rotateX: 5,
+      rotateZ: 15,
+      translateY: 1,
+      easing: 'linear',
+      duration: 300,
+    })
   }
 
   mouseLeave = () => {

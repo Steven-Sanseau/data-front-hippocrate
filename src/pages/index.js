@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 import { Text, Box, Flex } from 'rebass'
 
 import client from '../utils/client'
@@ -22,6 +24,9 @@ export default class IndexPage extends Component {
       },
     }
   }
+  static propTypes = {
+    location: PropTypes.object,
+  }
 
   async componentDidMount() {
     const { data } = await client.query({
@@ -29,14 +34,14 @@ export default class IndexPage extends Component {
     })
 
     this.setState({ data })
-    console.log(this.state)
   }
 
   render() {
     const { data } = this.state
+    const { location } = this.props
     return (
       <main>
-        <Header />
+        <Header location={location} />
         <Jumbotron />
         <Preamble />
 

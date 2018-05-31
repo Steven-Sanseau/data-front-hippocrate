@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Label, Flex, Box, Text } from 'rebass'
+import { Label, Flex, Box, Text, Image } from 'rebass'
 import InputText from './InputText'
 import request from '../../utils/request'
 import ButtonPrimary from '../Button'
+import SelectHandle from './SelectHandle'
 
 class SupporterForm extends Component {
   constructor(props) {
@@ -195,9 +196,9 @@ class SupporterForm extends Component {
                   </Box>
                   <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                     <Label color="violet_text">
-                      linkedin.com/in/
+                      Linkedin
                       <InputText
-                        placeholder="handle"
+                        placeholder="https://twitter.com/MichelMichel"
                         name="linkedInHandle"
                         onChange={this.handleChange}
                         value={linkedInHandle}
@@ -206,7 +207,7 @@ class SupporterForm extends Component {
                   </Box>
                   <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                     <Label color="violet_text">
-                      twitter.com/
+                      Twitter
                       <InputText
                         placeholder="handle"
                         name="twitterHandle"
@@ -217,7 +218,7 @@ class SupporterForm extends Component {
                   </Box>
                   <Box width={['100%', '90%']} mx={[0, 3]} my={3}>
                     <Label color="violet_text">
-                      github.com/
+                      Github
                       <InputText
                         placeholder="handle"
                         name="githubHandle"
@@ -227,10 +228,28 @@ class SupporterForm extends Component {
                     </Label>
                   </Box>
                   <Box width={1}>
-                    <Text color="violet_text" fontWeight="300" fontSize={14}>
-                      * champs obligatoire
+                    <Text
+                      color="violet_text"
+                      fontWeight="300"
+                      fontSize={14}
+                      mx={[0, 3]}
+                    >
+                      * champs obligatoires
                     </Text>
                   </Box>
+                  {errorMessage &&
+                    show_error && (
+                      <Box mx="auto" my={2}>
+                        <Text
+                          color="red"
+                          textAlign="center"
+                          fontWeight={300}
+                          mt={3}
+                        >
+                          {errorMessage}
+                        </Text>
+                      </Box>
+                    )}
                   <Box mx="auto">
                     <ButtonPrimary
                       mt={[4, 3]}
@@ -242,22 +261,13 @@ class SupporterForm extends Component {
                     </ButtonPrimary>
                   </Box>
                 </Flex>
-
-                {errorMessage &&
-                  show_error && (
-                    <Text
-                      color="red"
-                      textAlign="center"
-                      fontWeight={300}
-                      mt={3}
-                    >
-                      {errorMessage}
-                    </Text>
-                  )}
+                <Text fontSize={1} textAlign="center" fontWeight={300} my={3}>
+                  Votre signature sera validée dans les plus brefs délais !
+                </Text>
               </form>
             )}
             {isSubmited && (
-              <Text textAlign="center" fontSize="20px">
+              <Text textAlign="center" fontSize={4} p={4}>
                 Merci de votre signature !
               </Text>
             )}

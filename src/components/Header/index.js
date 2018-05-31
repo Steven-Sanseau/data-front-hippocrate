@@ -2,13 +2,23 @@ import React from 'react'
 import { NavLink, Toolbar, Link } from 'rebass'
 import Hide from 'hidden-styled'
 
-const Header = () => (
+const Header = ({ location }) => (
   <header>
     <Toolbar mb="4em">
-      <NavLink href="/" ml="auto" color="dark_grey" fontWeight="600">
-        Signer le serment
+      <NavLink
+        href="/"
+        ml="auto"
+        color="dark_grey"
+        fontWeight={location.pathname === '/' ? 700 : 300}
+      >
+        Accueil
       </NavLink>
-      <NavLink href="/presse" ml="1em" color="dark_grey" fontWeight="300">
+      <NavLink
+        href="/presse"
+        ml="1em"
+        color="dark_grey"
+        fontWeight={location.pathname === '/presse' ? 700 : 300}
+      >
         Presse
       </NavLink>
       <NavLink
@@ -16,9 +26,9 @@ const Header = () => (
         href="/team"
         ml="1em"
         color="dark_grey"
-        fontWeight="300"
+        fontWeight={location.pathname === '/team' ? 700 : 300}
       >
-        Qui sommes nous ?
+        Qui sommes-nous ?
       </NavLink>
       <Hide xs>
         <NavLink
@@ -26,7 +36,7 @@ const Header = () => (
           target="_blank"
           ml="1em"
           color="dark_grey"
-          fontWeight="300"
+          fontWeight={300}
         >
           Data for good
         </NavLink>
