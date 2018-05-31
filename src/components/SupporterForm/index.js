@@ -4,7 +4,6 @@ import { Label, Flex, Box, Text, Image } from 'rebass'
 import InputText from './InputText'
 import request from '../../utils/request'
 import ButtonPrimary from '../Button'
-import SelectHandle from './SelectHandle'
 
 class SupporterForm extends Component {
   constructor(props) {
