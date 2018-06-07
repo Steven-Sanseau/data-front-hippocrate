@@ -11,6 +11,7 @@ const TextPrinciple = Text.extend`
   font-family: Circular;
   font-weight: 300;
   line-height: 24px;
+  text-align: justify;
 `
 
 const Principle = ({ principle }) => (

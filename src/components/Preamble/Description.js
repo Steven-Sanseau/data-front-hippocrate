@@ -6,6 +6,7 @@ const Description = Text.extend`
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  text-align: justify;
   opacity: 0.54;
 `
 export default Description

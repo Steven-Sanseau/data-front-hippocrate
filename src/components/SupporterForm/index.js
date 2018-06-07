@@ -113,15 +113,15 @@ class SupporterForm extends Component {
     return (
       <Box bg="grey_background">
         <Flex justifyContent="center">
-          <Box width={[1, '50%']} p={4}>
+          <Box width={['100%', '100%', '100%', '50%']} p={4}>
             {!isSubmited && (
               <form onSubmit={this.newSupporter}>
                 <Flex flexWrap="wrap" justifyContent="left">
                   <Box width={1}>
-                    <Flex>
+                    <Flex flexWrap="wrap">
                       <Box
-                        width={['100%', '100%', '100%', '42%']}
-                        mx={[0, 3]}
+                        width={['100%', '100%', '100%', '100%', '42%']}
+                        mx={[0, 0, 0, 0, 3]}
                         my={3}
                       >
                         <Label color="violet_text">
@@ -146,8 +146,8 @@ class SupporterForm extends Component {
                       </Box>
 
                       <Box
-                        width={['100%', '100%', '100%', '42%']}
-                        mx={[0, '28px']}
+                        width={['100%', '100%', '100%', '100%', '42%']}
+                        mx={[0, 0, 0, 0, '28px']}
                         my={3}
                       >
                         <Label color="violet_text">
@@ -197,7 +197,7 @@ class SupporterForm extends Component {
                     <Label color="violet_text">
                       Linkedin
                       <InputText
-                        placeholder="https://twitter.com/MichelMichel"
+                        placeholder="https://twitter.com/MichelHi"
                         name="linkedInHandle"
                         onChange={this.handleChange}
                         value={linkedInHandle}

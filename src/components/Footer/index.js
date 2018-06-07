@@ -4,18 +4,19 @@ import Cookie from '../Cookie'
 
 const Footer = () => (
   <footer>
-    <Flex justifyContent="center" mt={5}>
+    <Flex justifyContent="center" mt={[5, 6]}>
       <Text
         color="dark_blue"
         textAlign="center"
         fontSize={14}
-        style={{ opacity: 0.7, fontFamily: 'Roboto' }}
+        fontWeight={300}
+        style={{ opacity: 0.7 }}
       >
         Ce projet est porté dans le cadre de la saison d’accélération de
         l’association{' '}
         <Link
           color="dark_blue"
-          href="http://www.dataforgood.fr/"
+          href="http://www.dataforgood.fr/?utm_source=hippocrate_batch4&utm_campaign=heading_website"
           target="_blank"
         >
           Data For Good
@@ -28,7 +29,7 @@ const Footer = () => (
         </Link>.
       </Text>
     </Flex>
-    `<Relative>
+    <Relative>
       <Absolute right={0} bottom={0}>
         <Cookie />
       </Absolute>

@@ -12,6 +12,7 @@ const TextDetails = Text.extend`
   opacity: 0.7;
   font-weight: 300;
   line-height: 24px;
+  text-align: justify;
 `
 
 const TextTitle = Text.extend`
@@ -21,6 +22,7 @@ const TextTitle = Text.extend`
   color: ${themeGet('colors.supporter_grey')};
   font-weight: 300;
   line-height: 24px;
+  text-align: justify;
 `
 
 const TextMore = Text.extend`

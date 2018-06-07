@@ -6,31 +6,32 @@ import Header from '../components/Header'
 const PressePage = ({ data, location }) => (
   <main>
     <Header location={location} />
+
     <Flex mx={-2} justifyContent="center">
-      <Box width={[1, '40%']} px={2}>
-        <Text
-          color="dark_grey"
-          textAlign="right"
-          fontSize={25}
-          fontWeight={300}
-          mt={6}
-        >
-          Communiqué de presse
-        </Text>
-      </Box>
-      <Box width={[1, 1 / 2]} px={2}>
-        <Image
-          ml="2em"
-          style={{ opacity: 0.2 }}
-          width={['100%', '25%']}
-          src="/static/hippocrate.png"
-        />
-        <Image
-          width={['100%', '14.5%']}
-          mt="-17.5%"
-          ml="8.1%"
-          src="/static/glasses.png"
-        />
+      <Box width={['100%', '60%']}>
+        <Flex justifyContent="center">
+          <Box width={[1, 1, 1, 1 / 2]} px={2}>
+            <Text
+              color="dark_grey"
+              textAlign="right"
+              fontSize={25}
+              fontWeight={300}
+              mt={6}
+            >
+              Communiqué de presse
+            </Text>
+          </Box>
+          <Box width={[0, 0, 1 / 2, 1 / 3]} px={2}>
+            <Box>
+              <Image
+                ml="2em"
+                style={{ opacity: 0.2 }}
+                width={['100%', '200px']}
+                src="/static/hippocrate.png"
+              />
+            </Box>
+          </Box>
+        </Flex>
       </Box>
     </Flex>
 
