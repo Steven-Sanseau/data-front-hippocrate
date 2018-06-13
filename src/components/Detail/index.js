@@ -10,7 +10,6 @@ const TextDetails = Text.extend`
   font-size: 16px;
   color: ${themeGet('colors.dark_grey')};
   font-family: Circular;
-  opacity: 0.7;
   font-weight: 300;
   line-height: 24px;
   text-align: justify;
