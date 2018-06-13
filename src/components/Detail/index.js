@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Text, Box } from 'rebass'
 import { themeGet } from 'styled-system'
+import Markdown from 'react-remarkable'
 
 const TextDetails = Text.extend`
   margin-bottom: 20px;
@@ -63,7 +64,11 @@ export default class Detail extends Component {
           </TextMore>
         </TextTitle>
 
-        {isOpen && <TextDetails>{detail.text}</TextDetails>}
+        {isOpen && (
+          <TextDetails>
+            <Markdown source={detail.text} />
+          </TextDetails>
+        )}
       </Box>
     )
   }

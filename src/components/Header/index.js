@@ -17,7 +17,7 @@ const Header = ({ location }) => (
         href="/presse"
         ml="1em"
         color="dark_grey"
-        fontWeight={location.pathname === '/presse' ? 700 : 300}
+        fontWeight={location.pathname === '/presse/' ? 700 : 300}
       >
         Presse
       </NavLink>
@@ -26,7 +26,7 @@ const Header = ({ location }) => (
         href="/team"
         ml="1em"
         color="dark_grey"
-        fontWeight={location.pathname === '/team' ? 700 : 300}
+        fontWeight={location.pathname === '/team/' ? 700 : 300}
       >
         Qui sommes-nous ?
       </NavLink>
