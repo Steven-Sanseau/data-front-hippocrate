@@ -63,7 +63,7 @@ class Supporter extends Component {
                 px={['30px', '90px']}
                 py={'20px'}
               >
-                Je Signe
+                Je signe
               </ButtonPrimary>
             </Box>
           </Flex>

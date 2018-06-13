@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Text, Box, Link } from 'rebass'
+import Cookies from 'universal-cookie'
+const cookies = new Cookies()
+
 import CookieCrumbs from '../Svg/CookieCrumbs'
 import CookieCrumbs1 from '../Svg/CookieCrumbs1'
 import CookieCrumbs2 from '../Svg/CookieCrumbs2'
@@ -19,7 +22,7 @@ export default class Cookie extends Component {
 
     this.state = {
       step: 0,
-      hideBanner: window.localStorage.getItem('cookie_banner_close') || false,
+      hideBanner: cookies.get('cookie_banner_close') || false,
     }
 
     this.crunch = this.crunch.bind(this)
@@ -35,7 +38,7 @@ export default class Cookie extends Component {
   }
 
   closeCookieBanner = () => {
-    window.localStorage.setItem('cookie_banner_close', true)
+    cookies.set('cookie_banner_close', true)
     this.setState({ hideBanner: true })
   }
 

@@ -37,7 +37,7 @@ const PressePage = ({ data, location }) => (
 
     <Flex justifyContent="center" mt={6}>
       <Box width={[1, '60%']}>
-        <Text>
+        <Text textAlign="justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit (titre)<br />
           <br />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
