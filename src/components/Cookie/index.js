@@ -19,7 +19,7 @@ export default class Cookie extends Component {
 
     this.state = {
       step: 0,
-      hideBanner: localStorage.getItem('cookie_banner_close') || false,
+      hideBanner: window.localStorage.getItem('cookie_banner_close') || false,
     }
 
     this.crunch = this.crunch.bind(this)
@@ -35,7 +35,7 @@ export default class Cookie extends Component {
   }
 
   closeCookieBanner = () => {
-    localStorage.setItem('cookie_banner_close', true)
+    window.localStorage.setItem('cookie_banner_close', true)
     this.setState({ hideBanner: true })
   }
 
