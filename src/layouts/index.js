@@ -52,20 +52,24 @@ const Layout = ({ children, data }) => (
               'hippocrate, data, science, serment hippocrate, data science',
           },
           {
-            name: 'og:image',
+            property: 'og:image',
             content: '/static/share_image.png',
           },
           {
-            name: 'og:description',
+            property: 'og:description',
             content: 'Je travaille avec la donnée ? Je signe !',
           },
           {
-            name: 'og:title',
+            property: 'og:title',
             content: "Serment d'Hippocrate pour data scientist",
           },
           {
-            name: 'og:url',
+            property: 'og:url',
             content: 'https://www.hippocrate.tech/',
+          },
+          {
+            property: 'og:type',
+            content: 'website',
           },
         ]}
       >
