@@ -4,7 +4,7 @@ import { themeGet } from 'styled-system'
 import Markdown from 'react-remarkable'
 import Detail from '../Detail'
 const TextPrinciple = Text.extend`
-  margin-bottom: 20px;
+  margin-top: 1.8%;
   margin-left: 11.4%;
   font-size: 16px;
   color: ${themeGet('colors.dark_grey')};
