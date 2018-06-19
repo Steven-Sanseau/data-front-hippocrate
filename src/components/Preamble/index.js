@@ -60,8 +60,8 @@ const Preamble = () => (
             </Flex>
             <Description>
               J’informerai de façon compréhensible et précise toutes les parties
-              prenantes sur les finalités, les modalités et les potentielles
-              implications de mon utilisation des données.
+              prenantes sur les finalités, les modalités et les implications
+              potentielles de mon utilisation des données.
             </Description>
 
             {/*Third ELEMENT*/}
@@ -75,10 +75,10 @@ const Preamble = () => (
               <Title>Equité</Title>
             </Flex>
             <Description>
-              Je veillerai à toujours m’assurer que des individus ne sont pas
-              discriminés par rapport à des critères illégaux ou illégitimes, de
-              façon directe ou indirecte, sur la base de mes travaux sur les
-              données.
+              Je veillerai à toujours m’assurer que des individus ou des groupes
+              ne soient pas discriminés par rapport à des critères illégaux ou
+              illégitimes, de façon directe ou indirecte, sur la base de mes
+              travaux sur les données.
             </Description>
 
             {/*Fourth ELEMENT*/}
@@ -108,8 +108,8 @@ const Preamble = () => (
             </Flex>
             <Description>
               J’assumerai mes responsabilités en cas de difficultés ou de
-              conflits d’intérêt et je donnerai l’alerte quand des actes
-              illégaux liés à des données seront constatés.
+              conflits d’intérêt et je donnerai l’alerte si des actes illégaux
+              liés à des données sont constatés.
             </Description>
           </Box>
         </Flex>
@@ -124,11 +124,7 @@ const Preamble = () => (
           </Text>
           <Text mt={1}>
             C’est une série de questions qu’on propose de se poser à chaque
-            étape du travail (en entreprise, en recherche ou en administration),
-          </Text>
-          <Text mt={3}>
-            pour tenter de <UnderlineText text="ne pas faire de mal" /> quand on
-            travaille avec les nombres et les données.
+            étape du travail en entreprise, en recherche ou en administration.
           </Text>
         </Box>
       </Flex>

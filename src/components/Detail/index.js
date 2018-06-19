@@ -6,22 +6,21 @@ import Markdown from 'react-remarkable'
 
 const TextDetails = Text.extend`
   margin-bottom: 20px;
-  margin-left: 12.4%;
-  font-size: 16px;
-  color: ${themeGet('colors.dark_grey')};
+  font-size: 14px;
+  color: ${themeGet('colors.supporter_grey')};
   font-family: Circular;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 14px;
   text-align: justify;
 `
 
 const TextTitle = Text.extend`
-  margin-bottom: 20px;
-  margin-left: 12.4%;
-  font-size: 16px;
+  margin-bottom: 10px;
+  margin-left: 18%;
+  font-size: 14px;
   color: ${themeGet('colors.supporter_grey')};
   font-weight: 300;
-  line-height: 24px;
+  line-height: 14px;
   text-align: justify;
 `
 
@@ -61,13 +60,12 @@ export default class Detail extends Component {
             {!isOpen && <span>Lire la suite</span>}
             {isOpen && <span>Lire moins</span>}
           </TextMore>
+          {isOpen && (
+            <TextDetails>
+              <Markdown source={detail.text} />
+            </TextDetails>
+          )}
         </TextTitle>
-
-        {isOpen && (
-          <TextDetails>
-            <Markdown source={detail.text} />
-          </TextDetails>
-        )}
       </Box>
     )
   }

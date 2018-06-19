@@ -232,7 +232,7 @@ class SupporterForm extends Component {
                     <Label color="violet_text">
                       Linkedin
                       <InputText
-                        placeholder="https://twitter.com/MichelHi"
+                        placeholder="https://www.linkedin.com/in/MichelHi"
                         name="linkedInHandle"
                         onChange={this.handleChange}
                         value={linkedInHandle}
@@ -243,7 +243,7 @@ class SupporterForm extends Component {
                     <Label color="violet_text">
                       Twitter
                       <InputText
-                        placeholder="handle"
+                        placeholder="https://www.twitter.com/MichelHi"
                         name="twitterHandle"
                         onChange={this.handleChange}
                         value={twitterHandle}
@@ -254,7 +254,7 @@ class SupporterForm extends Component {
                     <Label color="violet_text">
                       Github
                       <InputText
-                        placeholder="handle"
+                        placeholder="https://www.github.com/Michel-Hi"
                         name="githubHandle"
                         onChange={this.handleChange}
                         value={githubHandle}
