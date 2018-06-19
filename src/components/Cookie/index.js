@@ -55,16 +55,12 @@ export default class Cookie extends Component {
               fontSize="14px"
               lineHeight="14px"
             >
-              Nous utilisons des{' '}
+              Nous n'utilisons pas de{' '}
               {step === 0 && <CookieCrumbs width={16} height={16} />}
               {step === 1 && <CookieCrumbs1 width={16} height={16} />}
               {step === 2 && <CookieCrumbs2 width={16} height={16} />}
               {step === 3 && <CookieCrumbs3 width={16} height={16} />}
-              {step > 3 && <Text is="span">cookies</Text>}, <br />pour en savoir
-              plus{' '}
-              <Link href="/cookie" color="violet_text">
-                cliquez ici
-              </Link>
+              {step > 3 && <Text is="span">cookies</Text>}
             </Text>
           </BoxCookie>
         )}

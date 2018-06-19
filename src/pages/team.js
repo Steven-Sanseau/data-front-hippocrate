@@ -75,7 +75,7 @@ const TeamPage = ({ data, location }) => (
 
     <Flex flexWrap="wrap" justifyContent="center" mt={6}>
       <Box width={[1, '60%']}>
-        <Flex>
+        <Flex flexWrap="wrap">
           {data.allStrapiTeam.edges.map(member => (
             <TeamCard key={member.id} teamMember={member} />
           ))}
