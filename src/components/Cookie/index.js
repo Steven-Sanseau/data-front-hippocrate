@@ -49,10 +49,11 @@ export default class Cookie extends Component {
         {!hideBanner && (
           <BoxCookie bg="grey_background" onClick={this.crunch} p={[2, 3]}>
             <Text
-              color="violet_text"
+              color="dark_blue"
               fontWeight={300}
-              fontSize="16px"
-              lineHeight="16px"
+              style={{ opacity: 0.7 }}
+              fontSize="14px"
+              lineHeight="14px"
             >
               Nous utilisons des{' '}
               {step === 0 && <CookieCrumbs width={16} height={16} />}

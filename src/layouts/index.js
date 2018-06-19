@@ -55,6 +55,18 @@ const Layout = ({ children, data }) => (
             name: 'og:image',
             content: '/static/share_image.png',
           },
+          {
+            name: 'og:description',
+            content: 'Je travaille avec la donnée ? Je signe !',
+          },
+          {
+            name: 'og:title',
+            content: "Serment d'Hippocrate pour data scientist",
+          },
+          {
+            name: 'og:url',
+            content: 'https://www.hippocrate.tech/',
+          },
         ]}
       >
         <title>Serment d'Hippocrate pour Data Scientist</title>

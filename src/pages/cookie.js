@@ -10,7 +10,7 @@ const CookiePage = ({ location }) => (
     <Flex justifyContent="center">
       <Box width={['100%', '60%']}>
         <Text>
-          Nous utilisons des cookies dans le cadre d'outilms de tracking de
+          Nous utilisons des cookies dans le cadre d'outils de tracking de
           visites sur le site
         </Text>
       </Box>
