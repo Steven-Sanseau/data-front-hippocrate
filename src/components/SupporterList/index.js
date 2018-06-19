@@ -19,7 +19,7 @@ const SupporterList = ({ supporters }) => (
           supporters.map(supporter => (
             <Box key={supporter._id} width={[1, 1 / 3]}>
               <Flex>
-                <Box width="90%" mt={[3, 1]}>
+                <Box width="80%" mt={[3, 1]}>
                   <Text
                     textAlign="center"
                     color="supporter_grey"
@@ -29,7 +29,7 @@ const SupporterList = ({ supporters }) => (
                     {supporter.first_name} {supporter.last_name}
                   </Text>
                 </Box>
-                <Box width="10%" mt={[3, 1]}>
+                <Box width="40%" mt={[3, 1]}>
                   {supporter.linkedin_handle && (
                     <LinkInline
                       href={`https://www.linkedin.com/in/${

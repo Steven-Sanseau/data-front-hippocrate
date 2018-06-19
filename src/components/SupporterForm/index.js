@@ -105,17 +105,17 @@ class SupporterForm extends Component {
     let isValid = true
 
     if (firstName === '') {
-      error.firstName = 'Veuillez entrer votre Prénom'
+      error.firstName = 'Veuillez entrer votre prénom'
       isValid = false
     }
 
     if (lastName === '') {
-      error.lastName = 'Veuillez entrer votre Nom'
+      error.lastName = 'Veuillez entrer votre nom'
       isValid = false
     }
 
     if (email === '') {
-      error.email = 'Veuillez entrer votre Email'
+      error.email = 'Veuillez entrer votre email'
       isValid = false
     }
     this.setState({ errorInput: error })
