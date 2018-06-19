@@ -6,7 +6,7 @@ const Avatar = Image.extend`
   height: 100px;
 `
 const TeamCard = ({ teamMember }) => (
-  <Box key={teamMember.id} width={[1, 1 / 4]} m={[3, 2]}>
+  <Box key={teamMember.id} width={[1, 1, 1 / 2, 1 / 4]} m={[3, 2]}>
     <Avatar mx="auto" src={teamMember.node.avatar} />
     <Text fontSize={16} color="dark_grey" textAlign="center">
       {teamMember.node.name}
