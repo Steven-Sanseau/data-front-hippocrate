@@ -10,12 +10,12 @@ const TextDetails = Text.extend`
   color: ${themeGet('colors.supporter_grey')};
   font-family: Circular;
   font-weight: 300;
-  line-height: 14px;
+  line-height: 20px;
   text-align: justify;
 `
 
 const TextTitle = Text.extend`
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: 18%;
   font-size: 14px;
   color: ${themeGet('colors.supporter_grey')};
