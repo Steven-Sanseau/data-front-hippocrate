@@ -36,6 +36,7 @@ const SupporterList = ({ supporters }) => (
                         supporter.linkedin_handle
                       }`}
                       color="supporter_grey"
+                      target="_blank"
                     >
                       <LinkedinSquare width={16} height={16} />
                     </LinkInline>
@@ -44,6 +45,7 @@ const SupporterList = ({ supporters }) => (
                     <LinkInline
                       href={`https://twitter.com/${supporter.twitter_handle}`}
                       color="supporter_grey"
+                      target="_blank"
                     >
                       <TwitterSquare width={16} height={16} />
                     </LinkInline>
@@ -52,6 +54,7 @@ const SupporterList = ({ supporters }) => (
                     <LinkInline
                       href={`https://github.com/${supporter.github_handle}`}
                       color="supporter_grey"
+                      target="_blank"
                     >
                       <GithubSquare width={16} height={16} />
                     </LinkInline>

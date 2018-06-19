@@ -25,9 +25,42 @@ class SupporterForm extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+  getHandleTwitterFromUrl = value => {
+    const handleTwitterRegex = new RegExp(
+      '((https?://)?(www.)?twitter.com/)?(@|#!/)?([A-Za-z0-9_]{1,15})(/([-a-z]{1,20}))?'
+    )
+
+    const val = handleTwitterRegex.exec(value)
+    console.log(val)
+    return val ? val[5] : ''
+  }
+
+  getHandleGithubFromUrl = value => {
+    const handleGithubRegex = new RegExp(
+      '((https?://)?(www.)?github.com/)?(@|#!/)?([A-Za-z0-9_-]{1,15})(/([-a-z_-]{1,20}))?'
+    )
+
+    const val = handleGithubRegex.exec(value)
+    console.log(val)
+    return val ? val[5] : ''
+  }
+
+  getHandleLinkedInFromUrl = value => {
+    const handleLinkedInRegex = new RegExp(
+      '((https?://)?(www.)?linkedin.com/)?(@|#!/)?([A-Za-z0-9_]{1,15})(/([-a-z]{1,20}))?'
+    )
+
+    const val = handleLinkedInRegex.exec(value)
+    console.log(val)
+    return val ? val[7] : ''
+  }
+
   handleChange = e => {
     e.preventDefault()
-    this.setState({ [e.target.name]: e.target.value, errorMessage: null })
+
+    const value = e.target.value
+
+    this.setState({ [e.target.name]: value, errorMessage: null })
   }
 
   newSupporter = e => {
@@ -43,9 +76,11 @@ class SupporterForm extends Component {
       first_name: this.state.firstName,
       last_name: this.state.lastName,
       email: this.state.email,
-      linkedin_handle: this.state.linkedInHandle || '',
-      twitter_handle: this.state.twitterHandle || '',
-      github_handle: this.state.githubHandle || '',
+      linkedin_handle:
+        this.getHandleLinkedInFromUrl(this.state.linkedInHandle) || '',
+      twitter_handle:
+        this.getHandleTwitterFromUrl(this.state.twitterHandle) || '',
+      github_handle: this.getHandleGithubFromUrl(this.state.githubHandle) || '',
     }
 
     return request(requestURL, { method, body: body })
