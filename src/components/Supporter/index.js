@@ -22,7 +22,7 @@ class Supporter extends Component {
 
   updateSupporterList = () => {
     const method = 'GET'
-    const requestURL = `${process.env.API_URL}/supporter`
+    const requestURL = `${process.env.API_URL}/supporter?validated=true`
 
     return request(requestURL, { method })
       .catch(err => {
