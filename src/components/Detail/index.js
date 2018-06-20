@@ -11,7 +11,6 @@ const TextDetails = Text.extend`
   font-family: Circular;
   font-weight: 300;
   line-height: 20px;
-  text-align: justify;
 
   img {
     width: 75%;
@@ -25,7 +24,7 @@ const TextTitle = Text.extend`
   font-size: 14px;
   color: ${themeGet('colors.supporter_grey')};
   font-weight: 300;
-  line-height: 14px;
+  line-height: 20px;
   text-align: justify;
 `
 
@@ -66,7 +65,7 @@ export default class Detail extends Component {
             {isOpen && <span>Lire moins</span>}
           </TextMore>
           {isOpen && (
-            <TextDetails>
+            <TextDetails textAlign={['left', 'justify']}>
               <Markdown
                 source={detail.text}
                 options={{ linkTarget: '_blank' }}
