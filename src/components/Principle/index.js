@@ -3,7 +3,6 @@ import { Text, Box } from 'rebass'
 import { themeGet } from 'styled-system'
 import Markdown from 'react-remarkable'
 
-import Link from '../Markdown/Link'
 import Detail from '../Detail'
 
 const TextPrinciple = Text.extend`
