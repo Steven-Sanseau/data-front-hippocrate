@@ -212,7 +212,7 @@ anymatch@^1.3.0:
     micromatch "^2.1.5"
     normalize-path "^2.0.0"
 
-apollo-cache-inmemory@^1.1.7, apollo-cache-inmemory@^1.2.2:
+apollo-cache-inmemory@^1.1.7:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.2.3.tgz#873915049dc0f5bbea808d314223eae235d155cd"
   dependencies:
@@ -220,11 +220,25 @@ apollo-cache-inmemory@^1.1.7, apollo-cache-inmemory@^1.2.2:
     apollo-utilities "^1.0.14"
     graphql-anywhere "^4.1.12"
 
+apollo-cache-inmemory@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.2.5.tgz#b57951947b1db486a60db11c7dcfc6b112e5abe9"
+  dependencies:
+    apollo-cache "^1.1.12"
+    apollo-utilities "^1.0.16"
+    graphql-anywhere "^4.1.14"
+
 apollo-cache@^1.1.10:
   version "1.1.10"
   resolved "https://registry.yarnpkg.com/apollo-cache/-/apollo-cache-1.1.10.tgz#8b878155b85a515cf55316b09dd7960abaf0396f"
   dependencies:
     apollo-utilities "^1.0.14"
+
+apollo-cache@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/apollo-cache/-/apollo-cache-1.1.12.tgz#070015c9051b2ebb69676beb10466a9c0b259f91"
+  dependencies:
+    apollo-utilities "^1.0.16"
 
 apollo-client-preset@^1.0.8:
   version "1.0.8"
@@ -236,7 +250,7 @@ apollo-client-preset@^1.0.8:
     apollo-link-http "^1.3.1"
     graphql-tag "^2.4.2"
 
-apollo-client@^2.2.2, apollo-client@^2.3.2:
+apollo-client@^2.2.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.3.3.tgz#876ab4ca6891ba3b158b462686e88ff1fc622786"
   dependencies:
@@ -245,6 +259,20 @@ apollo-client@^2.2.2, apollo-client@^2.3.2:
     apollo-link "^1.0.0"
     apollo-link-dedup "^1.0.0"
     apollo-utilities "^1.0.14"
+    symbol-observable "^1.0.2"
+    zen-observable "^0.8.0"
+  optionalDependencies:
+    "@types/async" "2.0.49"
+
+apollo-client@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.3.5.tgz#74b62bd7e7bd7030d01c35e2e221ed65a807af23"
+  dependencies:
+    "@types/zen-observable" "^0.5.3"
+    apollo-cache "^1.1.12"
+    apollo-link "^1.0.0"
+    apollo-link-dedup "^1.0.0"
+    apollo-utilities "^1.0.16"
     symbol-observable "^1.0.2"
     zen-observable "^0.8.0"
   optionalDependencies:
@@ -280,6 +308,12 @@ apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.2:
 apollo-utilities@^1.0.0, apollo-utilities@^1.0.14:
   version "1.0.14"
   resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.0.14.tgz#39dc94b6fe827ab2857167545c7dafc11c2b6174"
+  dependencies:
+    fast-json-stable-stringify "^2.0.0"
+
+apollo-utilities@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.0.16.tgz#787310df4c3900a68c0beb3d351c59725a588cdb"
   dependencies:
     fast-json-stable-stringify "^2.0.0"
 
@@ -1886,7 +1920,7 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-tag@^1.0.3:
+clean-tag@^1.0.3, clean-tag@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clean-tag/-/clean-tag-1.0.4.tgz#9b407b306fadce114e6dffa774e7b61bdfc0c190"
   dependencies:
@@ -3523,6 +3557,18 @@ gatsby-node-helpers@^0.1.3:
     json-stringify-safe "^5.0.1"
     lodash "^4.17.4"
 
+gatsby-plugin-page-creator@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-1.0.1.tgz#6bad33a7f46cb5b87dbdaacc3c1bbd81ac63bc20"
+  dependencies:
+    babel-runtime "^6.26.0"
+    bluebird "^3.5.0"
+    chokidar "^1.7.0"
+    glob "^7.1.1"
+    lodash "^4.17.4"
+    parse-filepath "^1.0.1"
+    slash "^1.0.0"
+
 gatsby-plugin-react-helmet@^2.0.11:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-2.0.11.tgz#a2db81755f5b41d54e0e535ca1d9a008d3ccff0a"
@@ -3560,9 +3606,9 @@ gatsby-source-strapi@^0.0.3:
     gatsby-node-helpers "^0.1.3"
     lodash "^4.17.4"
 
-gatsby@^1.9.270:
-  version "1.9.270"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.270.tgz#9a0635c588618dbc11a34bb530c4390c26ef840f"
+gatsby@^1.9.272:
+  version "1.9.272"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.272.tgz#96582c6640dcdb0c156bd0c373ca339b13ba0399"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3607,6 +3653,7 @@ gatsby@^1.9.270:
     gatsby-cli "^1.1.58"
     gatsby-link "^1.6.44"
     gatsby-module-loader "^1.0.11"
+    gatsby-plugin-page-creator "^1.0.1"
     gatsby-react-router-scroll "^1.0.17"
     glob "^7.1.1"
     graphql "^0.11.7"
@@ -3896,6 +3943,12 @@ graphql-anywhere@^4.1.12:
   resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-4.1.12.tgz#1284ecce99d7bf060ad478b50970d9fbc53901d0"
   dependencies:
     apollo-utilities "^1.0.14"
+
+graphql-anywhere@^4.1.14:
+  version "4.1.14"
+  resolved "https://registry.yarnpkg.com/graphql-anywhere/-/graphql-anywhere-4.1.14.tgz#89664cb885faaec1cbc66905351fadae8cc85a04"
+  dependencies:
+    apollo-utilities "^1.0.16"
 
 graphql-relay@^0.5.1:
   version "0.5.5"
@@ -6832,7 +6885,7 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.13.4:
+prettier@^1.13.5:
   version "1.13.5"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.5.tgz#7ae2076998c8edce79d63834e9b7b09fead6bfd0"
 
@@ -7361,15 +7414,15 @@ realize-package-specifier@~3.0.3:
     dezalgo "^1.0.1"
     npm-package-arg "^4.1.1"
 
-rebass@^2.0.0-2:
-  version "2.0.0-5"
-  resolved "https://registry.yarnpkg.com/rebass/-/rebass-2.0.0-5.tgz#3d3a727b92ac782ba954a1d8afb1df8a195aaf92"
+rebass@^2.0.0-7:
+  version "2.0.0-7"
+  resolved "https://registry.yarnpkg.com/rebass/-/rebass-2.0.0-7.tgz#3ea40501b075fafff88c86cd024f560fca460079"
   dependencies:
     chroma-js "^1.3.6"
     grid-styled "^4.1.0"
     prop-types "^15.6.0"
-    styled-system "^2.2.5"
-    system-components "^2.0.2"
+    styled-system "^2.3.1"
+    system-components "^2.2.0"
 
 recast@^0.12.6:
   version "0.12.9"
@@ -8469,7 +8522,20 @@ style-loader@^0.13.0:
   dependencies:
     loader-utils "^1.0.2"
 
-styled-components@>=3.0.0, styled-components@^3.3.2:
+styled-components@^2.1.0:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.4.1.tgz#663bd0485d4b6ab46f946210dc03d2398d1ade74"
+  dependencies:
+    buffer "^5.0.3"
+    css-to-react-native "^2.0.3"
+    fbjs "^0.8.9"
+    hoist-non-react-statics "^1.2.0"
+    is-plain-object "^2.0.1"
+    prop-types "^15.5.4"
+    stylis "^3.4.0"
+    supports-color "^3.2.3"
+
+styled-components@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.3.2.tgz#087b96830ee3d60d9a8b5ef17c132b4f29cc71df"
   dependencies:
@@ -8484,22 +8550,15 @@ styled-components@>=3.0.0, styled-components@^3.3.2:
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
 
-styled-components@^2.1.0:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.4.1.tgz#663bd0485d4b6ab46f946210dc03d2398d1ade74"
-  dependencies:
-    buffer "^5.0.3"
-    css-to-react-native "^2.0.3"
-    fbjs "^0.8.9"
-    hoist-non-react-statics "^1.2.0"
-    is-plain-object "^2.0.1"
-    prop-types "^15.5.4"
-    stylis "^3.4.0"
-    supports-color "^3.2.3"
-
-"styled-system@>=1.1 || >=2.0", styled-system@>=2.0.1, styled-system@>=2.0.2, styled-system@^2.2.5:
+"styled-system@>=1.1 || >=2.0", styled-system@>=2.0.2:
   version "2.2.9"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-2.2.9.tgz#1a9a2187b1856b4a385ed65a1daff771a253f3d9"
+  dependencies:
+    prop-types "^15.6.0"
+
+styled-system@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-2.3.1.tgz#03d02b19131909329029265caa3377b04e79ce43"
   dependencies:
     prop-types "^15.6.0"
 
@@ -8547,13 +8606,12 @@ symbol@^0.2.1:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/symbol/-/symbol-0.2.3.tgz#3b9873b8a901e47c6efe21526a3ac372ef28bbc7"
 
-system-components@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/system-components/-/system-components-2.0.4.tgz#c9615afd78d48ecc1c713f614cf14fcd3315ec05"
+system-components@^2.2.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/system-components/-/system-components-2.2.1.tgz#a1aba8fca4e415a00d24c8e3ca109a14042974d5"
   dependencies:
-    clean-tag "^1.0.3"
-    styled-components ">=3.0.0"
-    styled-system ">=2.0.1"
+    clean-tag "^1.0.4"
+    styled-system "^2.3.1"
 
 systemjs-builder@0.16.13:
   version "0.16.13"
@@ -8884,9 +8942,9 @@ units-css@^0.4.0:
     isnumeric "^0.2.0"
     viewport-dimensions "^0.2.0"
 
-universal-cookie@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-2.1.5.tgz#d6cfcd57f0e753acaaf99cd5517c5f1718316fc1"
+universal-cookie@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/universal-cookie/-/universal-cookie-2.2.0.tgz#328dc3883cf0ebd5b4904902033ad4dfdb907ed2"
   dependencies:
     cookie "^0.3.1"
     object-assign "^4.1.0"
