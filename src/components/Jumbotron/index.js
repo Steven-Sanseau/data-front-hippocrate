@@ -17,11 +17,10 @@ export default class Jumbotron extends Component {
   componentDidMount = () => {
     const anim = anime({
       targets: '#glasses',
-      // marginTop: '-17.5%',
       translateY: 104,
       opacity: '1',
       easing: 'linear',
-      duration: 300,
+      duration: 500,
     })
 
     this.setState({
@@ -30,17 +29,12 @@ export default class Jumbotron extends Component {
   }
 
   mouseEnter = () => {
-    this.state.glassesAnim = anime({
-      targets: '#glasses',
-      rotateX: 5,
-      rotateZ: 15,
-      translateY: 1,
-      easing: 'linear',
-      duration: 300,
-    })
+    this.state.glassesAnim.play()
+    this.state.glassesAnim.reverse()
   }
 
   mouseLeave = () => {
+    this.state.glassesAnim.play()
     this.state.glassesAnim.reverse()
   }
 
