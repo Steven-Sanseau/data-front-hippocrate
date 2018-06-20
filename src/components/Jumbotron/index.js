@@ -66,8 +66,9 @@ export default class Jumbotron extends Component {
               <Text
                 color="dark_grey"
                 textAlign="right"
-                fontSize="14"
+                fontSize="14px"
                 mt={9}
+                mb={[4, 0]}
                 lineHeight="45px"
                 fontWeight={300}
                 style={{ opacity: 0.3 }}

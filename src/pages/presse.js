@@ -66,7 +66,7 @@ export default class PressePage extends Component {
           </Box>
         </Flex>
 
-        <Flex justifyContent="center" mt={6}>
+        <Flex justifyContent="center" mt={6} mx={[3, 0]}>
           <Box width={[1, '45%']}>
             <Text textAlign="center" is="h2" mb={4}>
               Un “serment d’Hippocrate pour toute personne travaillant avec la

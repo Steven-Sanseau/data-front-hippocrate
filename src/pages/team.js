@@ -9,7 +9,7 @@ const TeamPage = ({ data, location }) => (
     <Header location={location} />
     <Flex mx={-2} justifyContent="center">
       <Box width={['100%', '60%']}>
-        <Flex justifyContent="center">
+        <Flex mx={[3, 0]} justifyContent="center">
           <Box width={[1, 1, 1, 1 / 2]} px={2}>
             <Text
               color="dark_grey"
