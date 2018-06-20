@@ -54,8 +54,8 @@ const TeamPage = ({ data, location }) => (
             >
               N’hésitez à nous rejoindre si vous souhaitez collaborer ! Pour
               cela, vous pouvez nous écrire à{' '}
-              <Link href="mailto:hippocrate.tech@gmail.com" color="dark_grey">
-                hippocrate.tech@gmail.com
+              <Link href="mailto:contact@hippocrate.tech" color="dark_grey">
+                contact@hippocrate.tech
               </Link>.
             </Text>
           </Box>

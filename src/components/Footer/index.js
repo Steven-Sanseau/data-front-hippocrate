@@ -24,8 +24,8 @@ const Footer = () => (
         <br />
         Des mises à jour régulières sont prévues. Pour toute suggestion, merci
         de contacter{' '}
-        <Link color="dark_blue" href="mailto:hippocrate.tech@gmail.com">
-          hippocrate.tech@gmail.com
+        <Link color="dark_blue" href="mailto:contact@hippocrate.tech">
+          contact@hippocrate.tech
         </Link>.
       </Text>
     </Flex>
