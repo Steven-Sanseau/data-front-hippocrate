@@ -15,10 +15,12 @@ const TextDetails = Text.extend`
   img {
     width: 75%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
   a {
     color: ${themeGet('colors.violet_text')};
-
     cursor: pointer;
   }
 `

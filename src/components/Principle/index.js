@@ -17,6 +17,9 @@ const TextPrinciple = Text.extend`
   img {
     width: 75%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 
   a {
