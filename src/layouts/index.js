@@ -53,7 +53,7 @@ const Layout = ({ children, data }) => (
           },
           {
             property: 'og:image',
-            content: `${process.env.FRONT_URL}/static/share_image.png`,
+            content: `${process.env.FRONT_URL}static/share_image.png`,
           },
           {
             property: 'og:description',
