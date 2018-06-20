@@ -53,7 +53,7 @@ const Layout = ({ children, data }) => (
           },
           {
             property: 'og:image',
-            content: '/static/share_image.png',
+            content: `${process.env.FRONT_URL}/static/share_image.png`,
           },
           {
             property: 'og:description',
@@ -65,7 +65,7 @@ const Layout = ({ children, data }) => (
           },
           {
             property: 'og:url',
-            content: 'https://www.hippocrate.tech/',
+            content: `${process.env.FRONT_URL}`,
           },
           {
             property: 'og:type',
@@ -77,7 +77,7 @@ const Layout = ({ children, data }) => (
         <link
           rel="icon"
           type="image/png"
-          href="/static/hippocrate.ico"
+          href={`${process.env.FRONT_URL}static/hippocrate.ico`}
           sizes="16x16"
         />
       </Helmet>
