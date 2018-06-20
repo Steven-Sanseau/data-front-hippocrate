@@ -6,7 +6,7 @@ import Underline from './Underline'
 
 const Step = ({ step }) => (
   <Box key={step._id}>
-    <Title>
+    <Title textAlign={['left', 'justify']}>
       {step.title}
       <Underline />
     </Title>

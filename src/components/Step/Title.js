@@ -8,6 +8,5 @@ const Title = Text.extend`
   padding-top: 3.4em;
   z-index: 100;
   display: inline-block;
-  text-align: justify;
 `
 export default Title
