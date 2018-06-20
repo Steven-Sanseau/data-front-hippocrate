@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image, Flex, Box, Text } from 'rebass'
+import { Image, Flex, Box, Text, Relative } from 'rebass'
 import anime from 'animejs'
 
 export default class Jumbotron extends Component {
@@ -81,20 +81,22 @@ export default class Jumbotron extends Component {
                 onMouseEnter={this.mouseEnter}
                 onMouseLeave={this.mouseLeave}
               >
-                <Image
-                  ml="2em"
-                  style={{ opacity: 0.2 }}
-                  width={['100%', '200px']}
-                  src="/static/hippocrate.png"
-                />
-                <Image
-                  width={['100%', '35%']}
-                  style={{ opacity: 0 }}
-                  mt={[0, '-30%', '-76%']}
-                  ml="21%"
-                  src="/static/glasses.png"
-                  id="glasses"
-                />
+                <Relative>
+                  <Image
+                    ml="2em"
+                    style={{ opacity: 0.2 }}
+                    width={['100%', '200px']}
+                    src="/static/hippocrate.png"
+                  />
+                  <Image
+                    width={['90px', '90px', '105px', '114px']}
+                    style={{ opacity: 0 }}
+                    mt={[0, '-237px', '-237px', '-245px']}
+                    ml="67px"
+                    src="/static/glasses.png"
+                    id="glasses"
+                  />
+                </Relative>
               </Box>
             </Box>
           </Flex>
