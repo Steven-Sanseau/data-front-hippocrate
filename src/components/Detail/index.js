@@ -16,6 +16,11 @@ const TextDetails = Text.extend`
     width: 75%;
     height: auto;
   }
+  a {
+    color: ${themeGet('colors.violet_text')};
+
+    cursor: pointer;
+  }
 `
 
 const TextTitle = Text.extend`

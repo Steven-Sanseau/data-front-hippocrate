@@ -18,6 +18,12 @@ const TextPrinciple = Text.extend`
     width: 75%;
     height: auto;
   }
+
+  a {
+    color: ${themeGet('colors.violet_text')};
+
+    cursor: pointer;
+  }
 `
 
 const Principle = ({ principle }) => (
