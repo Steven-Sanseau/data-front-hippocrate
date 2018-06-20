@@ -21,11 +21,12 @@ export const GET_STEP = gql`
   }
 `
 export const GET_PAGE = gql`
-  query {
-    page {
+  query page($slug: String!) {
+    pages(where: { slug: $slug }) {
       _id
       title
       content
+      slug
     }
   }
 `

@@ -21,7 +21,14 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.API_URL,
-        contentTypes: ['step', 'principle', 'detail', 'supporter', 'team'],
+        contentTypes: [
+          'step',
+          'principle',
+          'detail',
+          'supporter',
+          'team',
+          'page',
+        ],
       },
     },
   ],
