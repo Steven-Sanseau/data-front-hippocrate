@@ -15,11 +15,9 @@ const TextPrinciple = Text.extend`
   line-height: 24px;
   text-align: justify;
   img {
-    width: 75%;
+    width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    display: inherit;
   }
 
   a {

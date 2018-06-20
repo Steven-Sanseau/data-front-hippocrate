@@ -13,11 +13,9 @@ const TextDetails = Text.extend`
   line-height: 20px;
 
   img {
-    width: 75%;
+    width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    display: inherit;
   }
   a {
     color: ${themeGet('colors.violet_text')};
