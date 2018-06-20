@@ -20,3 +20,12 @@ export const GET_STEP = gql`
     }
   }
 `
+export const GET_PAGE = gql`
+  query {
+    page {
+      _id
+      title
+      content
+    }
+  }
+`

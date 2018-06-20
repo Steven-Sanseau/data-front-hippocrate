@@ -12,6 +12,11 @@ const TextDetails = Text.extend`
   font-weight: 300;
   line-height: 20px;
   text-align: justify;
+
+  img {
+    width: 75%;
+    height: auto;
+  }
 `
 
 const TextTitle = Text.extend`
@@ -62,7 +67,10 @@ export default class Detail extends Component {
           </TextMore>
           {isOpen && (
             <TextDetails>
-              <Markdown source={detail.text} />
+              <Markdown
+                source={detail.text}
+                options={{ linkTarget: '_blank' }}
+              />
             </TextDetails>
           )}
         </TextTitle>
