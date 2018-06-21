@@ -4,7 +4,7 @@ import Cookie from '../Cookie'
 
 const Footer = () => (
   <footer>
-    <Flex justifyContent="center" mt={[5, 6]} mb={4}>
+    <Flex justifyContent="center" mt={[5, 6]} mb={5}>
       <Text
         color="dark_blue"
         textAlign="center"
