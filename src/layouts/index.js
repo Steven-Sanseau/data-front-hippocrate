@@ -71,6 +71,18 @@ const Layout = ({ children, data }) => (
             property: 'og:type',
             content: 'website',
           },
+          {
+            property: 'twitter:card',
+            content: 'summary_large_image',
+          },
+          {
+            property: 'twitter:site',
+            content: '@DataForGood_FR',
+          },
+          {
+            property: 'twitter:creator',
+            content: '@StevenSanseau',
+          },
         ]}
       >
         <title>Serment d'Hippocrate pour Data Scientist</title>
