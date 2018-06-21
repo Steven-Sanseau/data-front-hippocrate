@@ -59,6 +59,7 @@ const TeamPage = ({ data, location }) => (
                 href="https://framavox.org/g/Qtz0JHr9/dataforgood-serment"
                 target="_blank"
                 color="dark_grey"
+                fontWeight={500}
               >
                 Framavox
               </Link>.
