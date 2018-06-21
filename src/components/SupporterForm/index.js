@@ -288,7 +288,8 @@ class SupporterForm extends Component {
                     <ButtonPrimary
                       mt={[4, 3]}
                       px={['30px', '90px']}
-                      py={'20px'}
+                      pt={'15px'}
+                      pb={'20px'}
                       type="submit"
                     >
                       Je signe
