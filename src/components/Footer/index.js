@@ -28,7 +28,10 @@ const Footer = () => (
           contact@hippocrate.tech
         </Link>. <br />
         Illustrations par{' '}
-        <Link href="http://chapottelaurie.fr/">Laurie Chapotte</Link>
+        <Link color="dark_blue" href="http://chapottelaurie.fr/">
+          Laurie Chapotte
+        </Link>
+        <br />
       </Text>
     </Flex>
     <Relative>
