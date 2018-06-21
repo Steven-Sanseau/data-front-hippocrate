@@ -54,9 +54,13 @@ const TeamPage = ({ data, location }) => (
               mt={3}
             >
               N’hésitez à nous rejoindre si vous souhaitez collaborer ! Pour
-              cela, vous pouvez nous écrire à{' '}
-              <Link href="mailto:contact@hippocrate.tech" color="dark_grey">
-                contact@hippocrate.tech
+              cela, vous êtes les bienvenus sur notre{' '}
+              <Link
+                href="https://framavox.org/g/Qtz0JHr9/dataforgood-serment"
+                target="_blank"
+                color="dark_grey"
+              >
+                Framavox
               </Link>.
             </Text>
           </Box>
