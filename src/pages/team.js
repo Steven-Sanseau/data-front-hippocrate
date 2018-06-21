@@ -29,8 +29,8 @@ const TeamPage = ({ data, location }) => (
               mt={3}
             >
               L’idée d’écrire un <i>Serment d’Hippocrate pour Data Scientist</i>{' '}
-              avec l’aide de la communauté de Data for Good a été portée lors de
-              la seconde saison d’accélération de l’association.
+              a été portée lors de la quatrième saison d’accélération de
+              l’association.
             </Text>
 
             <Text
@@ -42,7 +42,8 @@ const TeamPage = ({ data, location }) => (
             >
               Après un questionnaire en ligne et lors de plusieurs sessions
               d’écriture collaborative, nous avons rédigé ce Serment qui est
-              voué à évoluer.
+              voué à évoluer en fonction des retours de la communauté et des
+              évolutions du métier.
             </Text>
 
             <Text
