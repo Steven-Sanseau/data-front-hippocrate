@@ -93,7 +93,7 @@ const Preamble = () => (
             </Flex>
             <Description>
               J’exercerai mon activité professionnelle en respectant la vie
-              privée et la dignité humaine dans toutes leurs dimensions.
+              privée et la dignité des personnes dans toutes leurs dimensions.
             </Description>
 
             {/*Fifth ELEMENT*/}
