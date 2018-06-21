@@ -107,9 +107,9 @@ const Preamble = () => (
               <Title>Responsabilité et indépendance</Title>
             </Flex>
             <Description>
-              J’assumerai mes responsabilités en cas de difficultés ou de
-              conflits d’intérêt et je donnerai l’alerte si des actes illégaux
-              liés à des données sont constatés.
+              J’assumerai mes responsabilités en cas manquements ou de conflits
+              d’intérêt et je donnerai l’alerte si des actes illégaux liés à des
+              données sont constatés.
             </Description>
           </Box>
         </Flex>
@@ -123,8 +123,12 @@ const Preamble = () => (
             a rédigé la <UnderlineText text="check-list éthique" /> ci-dessous.
           </Text>
           <Text mt={1}>
-            C’est une série de questions qu’on propose de se poser à chaque
-            étape du travail en entreprise, en recherche ou en administration.
+            C’est une série de questions qu’on propose de se poser à{' '}
+            <UnderlineText
+              text="chaque
+            étape"
+            />{' '}
+            du travail en entreprise, en recherche ou en administration.
           </Text>
         </Box>
       </Flex>
