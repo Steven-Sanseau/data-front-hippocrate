@@ -22,10 +22,14 @@ const Footer = () => (
           Data For Good
         </Link>
         <br />
-        Des mises à jour régulières sont prévues. Pour toute suggestion, merci
-        de contacter{' '}
-        <Link color="dark_blue" href="mailto:contact@hippocrate.tech">
-          contact@hippocrate.tech
+        Des mises à jour régulières sont prévues. Vous pouvez contribuer et
+        échanger autour de ce Serment sur notre{' '}
+        <Link
+          color="dark_blue"
+          target="_blank"
+          href="https://framavox.org/g/Qtz0JHr9/dataforgood-serment"
+        >
+          Framavox
         </Link>. <br />
         Illustrations par{' '}
         <Link
