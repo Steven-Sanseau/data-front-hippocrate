@@ -9,7 +9,7 @@ const Footer = () => (
         color="dark_blue"
         textAlign="center"
         fontSize={14}
-        fontWeight={300}
+        fontWeight={600}
         style={{ opacity: 0.7 }}
       >
         Vous pouvez contribuer et échanger autour de ce Serment sur notre{' '}
@@ -20,15 +20,25 @@ const Footer = () => (
         >
           Framavox
         </Link>. <br />
-        Illustrations par{' '}
-        <Link
-          target="_blank"
-          color="dark_blue"
-          href="http://chapottelaurie.fr/"
-        >
-          Laurie Chapotte
-        </Link>
-        <br />
+        <Text fontWeight={300}>
+          Site web par{' '}
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/stevensanseau/"
+            color="dark_blue"
+          >
+            Steven Sanséau
+          </Link>{' '}
+          - Illustrations par{' '}
+          <Link
+            target="_blank"
+            color="dark_blue"
+            href="http://chapottelaurie.fr/"
+          >
+            Laurie Chapotte
+          </Link>
+          <br />
+        </Text>
       </Text>
     </Flex>
     <Relative>

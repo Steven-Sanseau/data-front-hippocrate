@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Label, Flex, Box, Text, Image } from 'rebass'
+
+import Info from '../Svg/Info'
 import InputText from './InputText'
 import request from '../../utils/request'
 import ButtonPrimary from '../Button'
@@ -268,8 +270,7 @@ class SupporterForm extends Component {
                       fontSize={14}
                       mx={[0, 3]}
                     >
-                      * champs obligatoires (Nous demandons votre email à des
-                      fins de validation de votre signature)
+                      * champs obligatoires
                     </Text>
                   </Box>
                   {errorMessage &&
@@ -297,9 +298,30 @@ class SupporterForm extends Component {
                     </ButtonPrimary>
                   </Box>
                 </Flex>
-                <Text fontSize={1} textAlign="center" fontWeight={300} my={3}>
+                <Text fontSize={1} textAlign="center" fontWeight={300} my={4}>
                   Votre signature sera validée dans les plus brefs délais !
                 </Text>
+                <Flex>
+                  <Box width="92%">
+                    <Text
+                      fontSize="11px"
+                      textAlign="justify"
+                      color="dark_grey"
+                      fontWeight={300}
+                      lineHeight="15px"
+                    >
+                      Les informations recueillies sur ce formulaire sont
+                      enregistrées dans un fichier informatisé par Data for Good
+                      à des fins d'information et de communication externe.
+                      Elles sont conservées pendant 12 mois et sont destinées à
+                      une équipe de bénévoles de l'association Data for Good.
+                      Conformément à la loi « informatique et libertés », vous
+                      pouvez exercer votre droit d'accès aux données vous
+                      concernant et les faire rectifier en contactant :
+                      hellodataforgood@gmail.com.
+                    </Text>
+                  </Box>
+                </Flex>
               </form>
             )}
             {isSubmited && (
