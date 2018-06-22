@@ -86,7 +86,11 @@ export default class PressePage extends Component {
 
         <Flex justifyContent="center" mt={4} mx={[3, 0]}>
           <Box width={[1, '45%']}>
-            {isLoading && <LoaderPresse />}
+            {isLoading && (
+              <Box mt={4}>
+                <LoaderPresse />
+              </Box>
+            )}
             {!isLoading && (
               <TextPresse textAlign={['left', 'justify']}>
                 <Markdown source={data.content} />
