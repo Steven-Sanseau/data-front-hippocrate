@@ -13,6 +13,7 @@ import Preamble from '../components/Preamble'
 import Step from '../components/Step'
 import Footer from '../components/Footer'
 import Supporter from '../components/Supporter'
+import LoaderPrinciple from '../components/Loader/LoaderPrincipe'
 
 export default class IndexPage extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ export default class IndexPage extends Component {
       data: {
         steps: [],
       },
+      isLoading: true,
     }
   }
   static propTypes = {
@@ -33,11 +35,11 @@ export default class IndexPage extends Component {
       query: GET_STEP,
     })
 
-    this.setState({ data })
+    this.setState({ data: data, isLoading: false })
   }
 
   render() {
-    const { data } = this.state
+    const { data, isLoading } = this.state
     const { location } = this.props
     return (
       <main>
@@ -50,6 +52,7 @@ export default class IndexPage extends Component {
             {!data.loading &&
               data.steps &&
               data.steps.map(step => <Step key={step._id} step={step} />)}
+            {isLoading && <LoaderPrinciple />}
           </Box>
           <Box width={1}>
             <Supporter />

@@ -9,6 +9,7 @@ import client from '../utils/client'
 import { GET_PAGE } from '../query'
 import 'regenerator-runtime/runtime'
 
+import LoaderPresse from '../components/Loader/LoaderPresse'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
@@ -30,9 +31,8 @@ export default class PressePage extends Component {
     super(props)
 
     this.state = {
-      data: {
-        steps: [],
-      },
+      data: {},
+      isLoading: true,
     }
   }
   static propTypes = {
@@ -45,12 +45,13 @@ export default class PressePage extends Component {
       variables: { slug: 'presse' },
     })
 
-    this.setState({ data: data.pages[0] })
+    this.setState({ data: data.pages[0], isLoading: false })
   }
 
   render() {
     const { location } = this.props
-    const { data } = this.state
+    const { data, isLoading } = this.state
+
     return (
       <main>
         <Header location={location} />
@@ -85,9 +86,12 @@ export default class PressePage extends Component {
 
         <Flex justifyContent="center" mt={4} mx={[3, 0]}>
           <Box width={[1, '45%']}>
-            <TextPresse textAlign={['left', 'justify']}>
-              <Markdown source={data.content} />
-            </TextPresse>
+            {isLoading && <LoaderPresse />}
+            {!isLoading && (
+              <TextPresse textAlign={['left', 'justify']}>
+                <Markdown source={data.content} />
+              </TextPresse>
+            )}
           </Box>
         </Flex>
         <Footer />

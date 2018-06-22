@@ -268,7 +268,8 @@ class SupporterForm extends Component {
                       fontSize={14}
                       mx={[0, 3]}
                     >
-                      * champs obligatoires
+                      * champs obligatoires (Nous demandons votre email à des
+                      fins de validation de votre signature)
                     </Text>
                   </Box>
                   {errorMessage &&
