@@ -313,7 +313,7 @@ class SupporterForm extends Component {
                       Les informations recueillies sur ce formulaire sont
                       enregistrées dans un fichier informatisé par Data for Good
                       à des fins d'information et de communication externe.
-                      Elles sont conservées pendant 12 mois et sont destinées à
+                      Elles sont conservées pendant 24 mois et sont destinées à
                       une équipe de bénévoles de l'association Data for Good.
                       Conformément à la loi « informatique et libertés », vous
                       pouvez exercer votre droit d'accès aux données vous
