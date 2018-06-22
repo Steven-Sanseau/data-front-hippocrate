@@ -3,16 +3,16 @@ import ContentLoader from 'react-content-loader'
 
 const LoaderPrinciple = props => (
   <ContentLoader
-    height={160}
-    width={400}
+    height={100}
+    width={750}
     speed={2}
-    primaryColor="#f3f3f3"
-    secondaryColor="#ecebeb"
+    primaryColor="#F8F8F8"
+    secondaryColor="#E8E8E8"
     {...props}
   >
-    <rect x="6" y="12" rx="3" ry="3" width="70" height="10" />
-    <rect x="82" y="12" rx="3" ry="3" width="100" height="10" />
-    <rect x="190" y="12" rx="3" ry="3" width="60" height="10" />
+    <rect x="0" y="0" rx="3" ry="3" width="300" height="20" />
+    <rect x="310" y="0" rx="3" ry="3" width="50" height="20" />
+    <rect x="370" y="0" rx="3" ry="3" width="370" height="20" />
   </ContentLoader>
 )
 export default LoaderPrinciple

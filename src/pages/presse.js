@@ -45,7 +45,7 @@ export default class PressePage extends Component {
       variables: { slug: 'presse' },
     })
 
-    this.setState({ data: data.pages[0], isLoading: true })
+    this.setState({ data: data.pages[0], isLoading: false })
   }
 
   render() {
