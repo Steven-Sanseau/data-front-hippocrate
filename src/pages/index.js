@@ -49,10 +49,14 @@ export default class IndexPage extends Component {
 
         <Flex flexWrap="wrap" justifyContent="center">
           <Box p={3} width={[1, '60%']}>
+            {isLoading && (
+              <Box mt={6}>
+                <LoaderPrinciple />
+              </Box>
+            )}
             {!data.loading &&
               data.steps &&
               data.steps.map(step => <Step key={step._id} step={step} />)}
-            {isLoading && <LoaderPrinciple />}
           </Box>
           <Box width={1}>
             <Supporter />
