@@ -17,7 +17,7 @@ const SupporterList = ({ supporters }) => (
       <Flex flexWrap="wrap" justifyContent="center" mt={4}>
         {supporters &&
           supporters.map(supporter => (
-            <Box key={supporter._id} width={[1, 1 / 3]}>
+            <Box key={supporter._id} width={[1, 1 / 2]}>
               <Flex>
                 <Box width="80%" mt={[3, 1]}>
                   <Text
