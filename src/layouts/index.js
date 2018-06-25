@@ -57,7 +57,7 @@ const Layout = ({ children, data }) => (
           },
           {
             property: 'og:image',
-            content: `${process.env.FRONT_URL}static/share_image.png`,
+            content: `${process.env.FRONT_URL}/static/share_image.png`,
           },
           {
             property: 'og:description',
@@ -93,7 +93,7 @@ const Layout = ({ children, data }) => (
         <link
           rel="icon"
           type="image/png"
-          href={`${process.env.FRONT_URL}static/hippocrate.ico`}
+          href={`${process.env.FRONT_URL}/static/hippocrate.ico`}
           sizes="16x16"
         />
       </Helmet>
