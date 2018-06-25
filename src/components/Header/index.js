@@ -4,7 +4,7 @@ import Hide from 'hidden-styled'
 
 const Header = ({ location }) => (
   <header>
-    <Toolbar mb="4em">
+    <Toolbar bg={'white'} mb="4em">
       <NavLink
         href="/"
         ml="auto"
@@ -17,7 +17,7 @@ const Header = ({ location }) => (
         href="/presse"
         ml="1em"
         color="dark_grey"
-        fontWeight={location.pathname === '/presse/' ? 700 : 300}
+        fontWeight={location.pathname.match('presse') ? 700 : 300}
       >
         Presse
       </NavLink>
@@ -26,7 +26,7 @@ const Header = ({ location }) => (
         href="/team"
         ml="1em"
         color="dark_grey"
-        fontWeight={location.pathname === '/team/' ? 700 : 300}
+        fontWeight={location.pathname.match('team') ? 700 : 300}
       >
         Qui sommes-nous ?
       </NavLink>

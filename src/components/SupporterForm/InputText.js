@@ -8,7 +8,6 @@ const InputText = Input.extend`
   font-weight: 300;
   margin-left: 12px;
   box-shadow: 0px none;
-
   color: ${themeGet('colors.dark_grey')};
   ::placeholder {
     color: ${themeGet('colors.grey')};
