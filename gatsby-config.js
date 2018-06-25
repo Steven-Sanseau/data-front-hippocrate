@@ -13,10 +13,14 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Hippocratic Oath for Data Scientist`,
+    siteUrl: process.env.FRONT_URL,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
     {
       resolve: `gatsby-source-strapi`,
       options: {
