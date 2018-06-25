@@ -8,7 +8,7 @@ const Step = ({ step }) => (
   <Box key={step._id}>
     <Title textAlign={['left', 'justify']}>
       {step.title}
-      <Underline />
+      <Underline width={['100%', '113%', '113%']} />
     </Title>
     <Text color="dark_blue" fontSize={16} fontWeight="300">
       Je m'engage à …

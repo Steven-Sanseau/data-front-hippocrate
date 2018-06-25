@@ -11,11 +11,15 @@ const Preamble = () => (
   <div>
     <Box mt={[1, 6]}>
       <Flex justifyContent="center">
-        <Box width={['100%', '60%']} fontWeight={300}>
+        <Box width={['90%', '60%']} fontWeight={300}>
           <Text fontWeight={300}>
             En tant que <strong>professionnel(le)</strong> amené(e) à
           </Text>
-          <Text mt={3} fontWeight={300}>
+          <Text
+            mt={3}
+            lineHeight={['30px', '30px', '30px', '20px']}
+            fontWeight={300}
+          >
             collecter, stocker, traiter, modéliser, analyser des données et/ou à
             concevoir des algorithmes, des produits informatiques ou des
             interfaces,
@@ -117,8 +121,8 @@ const Preamble = () => (
     </Box>
     <Box mt={[1, 5]}>
       <Flex justifyContent="center">
-        <Box width={['100%', '60%']} fontSize="16">
-          <Text>
+        <Box width={['90%', '60%']} fontSize="16">
+          <Text lineHeight="20px">
             Pour mettre en application ces principes au quotidien, Data for Good
             a rédigé la <UnderlineText text="check-list éthique" /> ci-dessous.
           </Text>

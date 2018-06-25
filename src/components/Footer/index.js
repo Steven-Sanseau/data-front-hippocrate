@@ -20,7 +20,7 @@ const Footer = () => (
         >
           Framavox
         </Link>. <br />
-        <Text fontWeight={300}>
+        <Text fontWeight={300} mt={2}>
           Site web par{' '}
           <Link
             target="_blank"
