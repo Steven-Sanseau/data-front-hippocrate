@@ -36,6 +36,10 @@ injectGlobal`
     color: #fff;
     background: #878BC8;
  }
+ button:focus {
+   outline:0;
+ }
+
 `
 const Layout = ({ children, data }) => (
   <div>
