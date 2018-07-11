@@ -19,6 +19,14 @@ const Footer = () => (
           href="https://framavox.org/g/Qtz0JHr9/dataforgood-serment"
         >
           Framavox
+        </Link>{' '}
+        ou sur notre{' '}
+        <Link
+          color="dark_blue"
+          target="_blank"
+          href="https://github.com/dataforgoodfr/batch4_data_manifesto"
+        >
+          Github
         </Link>. <br />
         <Text fontWeight={300} mt={2}>
           Site web par{' '}

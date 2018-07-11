@@ -100,6 +100,7 @@ export const IndexQuery = graphql`
     allStrapiTeam {
       edges {
         node {
+          id
           name
           avatar
           position
