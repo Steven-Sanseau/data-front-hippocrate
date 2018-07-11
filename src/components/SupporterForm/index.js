@@ -29,7 +29,7 @@ class SupporterForm extends Component {
 
   getHandleTwitterFromUrl = value => {
     const handleTwitterRegex = new RegExp(
-      '((https?://)?(www.)?twitter.com/)?(@|#!/)?([A-Za-z0-9_]{1,15})(/([-a-z]{1,20}))?'
+      '((https?://)?(www.)?twitter.com/)?(@|#!/)?([A-Za-zÀ-ÿ0-9_]{1,15})(/([-a-z]{1,20}))?'
     )
 
     const val = handleTwitterRegex.exec(value)
@@ -39,7 +39,7 @@ class SupporterForm extends Component {
 
   getHandleGithubFromUrl = value => {
     const handleGithubRegex = new RegExp(
-      '((https?://)?(www.)?github.com/)?(@|#!/)?([A-Za-z0-9_-]{1,15})(/([-a-z_-]{1,20}))?'
+      '((https?://)?(www.)?github.com/)?(@|#!/)?([A-Za-zÀ-ÿ0-9_-]{1,15})(/([-a-z_-]{1,20}))?'
     )
 
     const val = handleGithubRegex.exec(value)
@@ -49,7 +49,7 @@ class SupporterForm extends Component {
 
   getHandleLinkedInFromUrl = value => {
     const handleLinkedInRegex = new RegExp(
-      '((https?://)?(www.)?linkedin.com/)?(@|#!/)?([A-Za-z0-9_]{1,15})(/([-a-z]{1,20}))?'
+      '((https?://)?(www.)?linkedin.com/)?(@|#!/)?([A-Za-z0-9À-ÿ_-]{1,15})(/([-a-z]{1,20}))?'
     )
 
     const val = handleLinkedInRegex.exec(value)
