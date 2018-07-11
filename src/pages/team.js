@@ -62,6 +62,15 @@ const TeamPage = ({ data, location }) => (
                 fontWeight={500}
               >
                 Framavox
+              </Link>{' '}
+              ou sur notre{' '}
+              <Link
+                href="https://github.com/dataforgoodfr/batch4_data_manifesto"
+                target="_blank"
+                color="dark_grey"
+                fontWeight={500}
+              >
+                Github
               </Link>.
             </Text>
           </Box>
