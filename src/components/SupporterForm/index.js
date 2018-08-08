@@ -33,7 +33,7 @@ class SupporterForm extends Component {
     )
 
     const val = handleTwitterRegex.exec(value)
-    console.log(val)
+
     return val ? val[5] : ''
   }
 
@@ -43,7 +43,7 @@ class SupporterForm extends Component {
     )
 
     const val = handleGithubRegex.exec(value)
-    console.log(val)
+
     return val ? val[5] : ''
   }
 
@@ -53,7 +53,7 @@ class SupporterForm extends Component {
     )
 
     const val = handleLinkedInRegex.exec(value)
-    console.log(val)
+
     return val ? val[7] : ''
   }
 
