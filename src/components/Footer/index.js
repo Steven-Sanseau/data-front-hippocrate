@@ -46,7 +46,7 @@ const Footer = () => (
           >
             Steven Sanséau
           </Link>{' '}
-          - Illustrations par{' '}
+          - Illustrations{' '}
           <Link
             target="_blank"
             color="dark_blue"
