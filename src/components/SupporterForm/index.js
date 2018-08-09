@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Label, Flex, Box, Text, Image } from 'rebass'
+import { Label, Flex, Box, Text } from 'rebass'
 
-import Info from '../Svg/Info'
 import InputText from './InputText'
 import request from '../../utils/request'
 import ButtonPrimary from '../Button'

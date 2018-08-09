@@ -27,9 +27,18 @@ const Footer = () => (
           href="https://github.com/dataforgoodfr/batch4_data_manifesto"
         >
           Github
-        </Link>. <br />
+        </Link>
+        . <br />
         <Text fontWeight={300} mt={2}>
-          Site web par{' '}
+          Design{' '}
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/soline/"
+            color="dark_blue"
+          >
+            Soline Ledésert
+          </Link>{' '}
+          - Développement{' '}
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/stevensanseau/"
