@@ -111,7 +111,7 @@ const Preamble = () => (
               <Title>Responsabilité et indépendance</Title>
             </Flex>
             <Description>
-              J’assumerai mes responsabilités en cas manquements ou de conflits
+              J’assumerai mes responsabilités en cas de manquements ou de conflits
               d’intérêt et je donnerai l’alerte si des actes illégaux liés à des
               données sont constatés.
             </Description>
