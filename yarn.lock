@@ -1164,9 +1164,10 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-animejs@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/animejs/-/animejs-2.2.0.tgz#35eefdfc535b81949c9cb06f0b3e60c02e6fdc80"
+animejs@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.0.1.tgz#8b808bad575e3b6106489d8b04b92bc4062166fe"
+  integrity sha512-7mMoBQScvA7s4zm3EVgnuXXrtOu6TJNAhU+Ajo7HsXYH0NwbuZIcRHMO65a9NyUlmAXz4VPxlK5cENNOQbCi8g==
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -4871,10 +4872,10 @@ gatsby-source-filesystem@^1.5.39:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-source-strapi@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.6.tgz#bee0fa3d887cf9950e9c3053fb813b97deb43c76"
-  integrity sha512-FnBBpdqrz2rVLk/hw+jZkZpVAwBO3vDeHaFEa3VaJGlk4e5mwWxYGHfdZ1Os5xOB6CZgR7TPQrkC2bQG0m+Rhg==
+gatsby-source-strapi@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.7.tgz#206a0416b7615cf2fd3c689544beecd45e13f54c"
+  integrity sha512-jeA7U+HnNB+PZ0+A1QjADiz0bYm7m050eq5d37h1XoC/Hm+qcgS2KZFoCJQOOf/UtrqWzj/3OfyJkNT51NtYJg==
   dependencies:
     axios "^0.18.0"
     gatsby-node-helpers "^0.3.0"
@@ -8526,10 +8527,10 @@ react-autocomplete-cli@^0.0.3:
     shelljs "^0.7.0"
     yargs "^4.7.1"
 
-react-content-loader@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-3.4.1.tgz#8eb273c630ffb36cb92f4383be811828eb8e1e66"
-  integrity sha512-lco6voFNwAGFBhVtczjyBuUKcBV1m8Ce3GNNEHm6maOCTIqGQePnomkwkfgcnpT9izZdAbpgeE8O4J/X+OG3JA==
+react-content-loader@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-4.0.1.tgz#a1e20110d7efecc446fb95d47766d3d792e5ea4c"
+  integrity sha512-qLuPQkaIRaUpAm65vaBQsiF+yfDuX5jTffok7zT0FDDXBn6qI6O8ZYoLtyDdO7Mqpq2pu/6jpzi8cD+rSDiEoQ==
 
 react-dev-utils@^4.2.1:
   version "4.2.1"
