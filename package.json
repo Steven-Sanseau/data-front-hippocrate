@@ -1,7 +1,7 @@
 {
   "name": "data-hippocrate",
   "description": "Hippocratic Oath for Data Scientist",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Steven Sanséau <steven.sanseau@gmail.com>",
   "dependencies": {
     "animejs": "^2.2.0",
