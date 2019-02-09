@@ -260,7 +260,10 @@ ansi-escapes@^3.0.0:
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
+<<<<<<< HEAD
   integrity sha1-gTWEAhliqenm/QOflA0S9WynhZ4=
+=======
+>>>>>>> oldrevert
 
 ansi-regex@^2.0.0:
   version "2.1.1"
@@ -271,6 +274,10 @@ ansi-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
   integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
+
+ansi-regex@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
 
 ansi-styles@^2.2.1:
   version "2.2.1"
@@ -2895,6 +2902,7 @@ debug@=3.1.0, debug@~3.1.0:
   dependencies:
     ms "2.0.0"
 
+<<<<<<< HEAD
 debug@^3.1.0, debug@^3.2.5:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
@@ -2909,6 +2917,8 @@ debug@~4.1.0:
   dependencies:
     ms "^2.1.1"
 
+=======
+>>>>>>> oldrevert
 debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
@@ -5860,7 +5870,10 @@ lodash-es@^4.2.1:
 lodash-id@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/lodash-id/-/lodash-id-0.14.0.tgz#baf48934e543a1b5d6346f8c84698b1a8c803896"
+<<<<<<< HEAD
   integrity sha1-uvSJNOVDobXWNG+MhGmLGoyAOJY=
+=======
+>>>>>>> oldrevert
 
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
@@ -5995,7 +6008,10 @@ lodash.reduce@^4.4.0:
 lodash.reject@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.reject/-/lodash.reject-4.6.0.tgz#80d6492dc1470864bbf583533b651f42a9f52415"
+<<<<<<< HEAD
   integrity sha1-gNZJLcFHCGS79YNTO2UfQqn1JBU=
+=======
+>>>>>>> oldrevert
 
 lodash.some@^4.4.0:
   version "4.6.0"
