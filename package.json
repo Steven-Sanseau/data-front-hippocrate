@@ -1,20 +1,20 @@
 {
   "name": "data-hippocrate",
   "description": "Hippocratic Oath for Data Scientist",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "author": "Steven Sanséau <steven.sanseau@gmail.com>",
   "dependencies": {
     "animejs": "^2.2.0",
-    "apollo-cache-inmemory": "^1.2.6",
-    "apollo-client": "^2.3.7",
+    "apollo-cache-inmemory": "^1.2.5",
+    "apollo-client": "^2.3.5",
     "apollo-client-preset": "^1.0.8",
     "apollo-link-http": "^1.5.4",
     "babel-plugin-styled-components": "^1.5.1",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-polyfill": "^6.26.0",
-    "gatsby": "^1.9.277",
+    "gatsby": "^1.9.273",
     "gatsby-cli": "^1.1.58",
-    "gatsby-link": "^1.6.46",
+    "gatsby-link": "^1.6.45",
     "gatsby-plugin-react-helmet": "^2.0.11",
     "gatsby-plugin-react-next": "^1.0.11",
     "gatsby-plugin-sitemap": "^1.2.25",
@@ -22,14 +22,15 @@
     "gatsby-source-strapi": "^0.0.3",
     "graphql-tag": "^2.9.2",
     "hidden-styled": "^1.0.0-0",
-    "isomorphic-unfetch": "^2.1.1",
+    "isomorphic-unfetch": "^2.0.0",
     "npm-check-updates": "^2.14.2",
+    "react": "^15.6.2",
     "react-content-loader": "^3.1.2",
     "react-helmet": "^5.2.0",
     "react-remarkable": "^1.1.3",
-    "rebass": "^2.0.0",
+    "rebass": "^2.0.0-2",
     "styled-components": "^3.3.3",
-    "styled-system": "^2.3.2",
+    "styled-system": "^2.2.5",
     "universal-cookie": "^2.2.0",
     "whatwg-fetch": "^2.0.4"
   },
@@ -45,7 +46,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.0",
+    "prettier": "^1.13.6",
     "react-autocomplete-cli": "^0.0.3"
   }
 }

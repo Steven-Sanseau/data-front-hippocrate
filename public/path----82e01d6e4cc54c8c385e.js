@@ -1,2 +1,2 @@
-webpackJsonp([60335399758886],{245:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Hippocratic Oath for Data Scientist"}}},layoutContext:{}}}});
+webpackJsonp([60335399758886],{315:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Hippocratic Oath for Data Scientist"}}},layoutContext:{}}}});
 //# sourceMappingURL=path----82e01d6e4cc54c8c385e.js.map

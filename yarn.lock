@@ -260,20 +260,11 @@ ansi-escapes@^3.0.0:
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
-<<<<<<< HEAD
-  integrity sha1-gTWEAhliqenm/QOflA0S9WynhZ4=
-=======
->>>>>>> oldrevert
 
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
   integrity sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
-
-ansi-regex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-3.0.0.tgz#ed0317c322064f79466c02966bddb605ab37d998"
-  integrity sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
 
 ansi-regex@^3.0.0:
   version "3.0.0"
@@ -325,7 +316,7 @@ apollo-cache-inmemory@^1.1.7:
     apollo-utilities "^1.0.17"
     graphql-anywhere "^4.1.15"
 
-apollo-cache-inmemory@^1.2.6:
+apollo-cache-inmemory@^1.2.5:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.4.2.tgz#c91aeb4adff45cdc7872d603cbff055fa9cd5021"
   integrity sha512-fDVmj5j1e3W+inyuSwjIcMgbQ4edcFgmiKTBMFAEKAq0jg33X7FrbDX8JT2t5Vuf75Mva50JDlt5wXdu7C6WuA==
@@ -373,7 +364,7 @@ apollo-client@^2.2.2:
   optionalDependencies:
     "@types/async" "2.0.49"
 
-apollo-client@^2.3.7:
+apollo-client@^2.3.5:
   version "2.4.12"
   resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.4.12.tgz#9fa15f502d04f8cc788a9fbb825163b437681504"
   integrity sha512-E5ClFSB9btJLYibLKwLDSCg+w9tI+25eZgXOM+DClawu7of4d/xhuV/xvpuZpsMP3qwrp0QPacBnfG4tUJs3/w==
@@ -2902,7 +2893,6 @@ debug@=3.1.0, debug@~3.1.0:
   dependencies:
     ms "2.0.0"
 
-<<<<<<< HEAD
 debug@^3.1.0, debug@^3.2.5:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
@@ -2917,8 +2907,6 @@ debug@~4.1.0:
   dependencies:
     ms "^2.1.1"
 
-=======
->>>>>>> oldrevert
 debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
@@ -4120,7 +4108,7 @@ gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-link@^1.6.46:
+gatsby-link@^1.6.45, gatsby-link@^1.6.46:
   version "1.6.46"
   resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.46.tgz#1f9f6bd7a4d448a856c2035e54f2263d7933f4fd"
   integrity sha1-H59r16TUSKhWwgNeVPImPXkz9P0=
@@ -4210,7 +4198,7 @@ gatsby-source-strapi@^0.0.3:
     gatsby-node-helpers "^0.1.3"
     lodash "^4.17.4"
 
-gatsby@^1.9.277:
+gatsby@^1.9.273:
   version "1.9.279"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.279.tgz#e035bcac78b8280e12d42a3d068af4dcda5fcfd6"
   integrity sha512-JpXW0l2bWpqxlrjnFm4GSoy1JgFaI9p9rlKOzDGBaLnwFHDHp2G8tgbcQmIH+RNf5m5okPDSgJySS/PjaKjWeg==
@@ -5496,7 +5484,7 @@ isomorphic-fetch@^2.1.1:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
-isomorphic-unfetch@^2.1.1:
+isomorphic-unfetch@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/isomorphic-unfetch/-/isomorphic-unfetch-2.1.1.tgz#c321770bcd682c5c8550f31146fc7dd21ac33e7b"
   integrity sha512-nd8AULy4i2rA8dv0nOBT9xieIegd3xi7NDxTQ9+iNXDTyaG6VbUYW3F+TdMRqxqXhDFWM2k7fttKx9W2Wd8JpQ==
@@ -5870,10 +5858,6 @@ lodash-es@^4.2.1:
 lodash-id@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/lodash-id/-/lodash-id-0.14.0.tgz#baf48934e543a1b5d6346f8c84698b1a8c803896"
-<<<<<<< HEAD
-  integrity sha1-uvSJNOVDobXWNG+MhGmLGoyAOJY=
-=======
->>>>>>> oldrevert
 
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
@@ -6008,10 +5992,6 @@ lodash.reduce@^4.4.0:
 lodash.reject@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.reject/-/lodash.reject-4.6.0.tgz#80d6492dc1470864bbf583533b651f42a9f52415"
-<<<<<<< HEAD
-  integrity sha1-gNZJLcFHCGS79YNTO2UfQqn1JBU=
-=======
->>>>>>> oldrevert
 
 lodash.some@^4.4.0:
   version "4.6.0"
@@ -8026,7 +8006,7 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
   integrity sha1-gV7R9uvGWSb4ZbMQwHE7yzMVzks=
 
-prettier@^1.14.0:
+prettier@^1.13.6:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
@@ -8434,6 +8414,16 @@ react@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react@^16.8.1:
+  version "16.8.1"
+  resolved "https://registry.yarnpkg.com/react/-/react-16.8.1.tgz#ae11831f6cb2a05d58603a976afc8a558e852c4a"
+  integrity sha512-wLw5CFGPdo7p/AgteFz7GblI2JPOos0+biSoxf1FPsGxWQZdN/pj6oToJs1crn61DL3Ln7mN86uZ4j74p31ELQ==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    prop-types "^15.6.2"
+    scheduler "^0.13.1"
+
 read-cache@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
@@ -8609,7 +8599,7 @@ realize-package-specifier@~3.0.3:
     dezalgo "^1.0.1"
     npm-package-arg "^4.1.1"
 
-rebass@^2.0.0:
+rebass@^2.0.0-2:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/rebass/-/rebass-2.3.4.tgz#f98070730ab6a527bb663f1a63dac6cd4a754a7d"
   integrity sha512-HWzR0OTTquc1GAu15czuzIF/AySFmhM3e+pJd5/ljQ8QuOWp+ZkgyITCbzt7shGOPp30Bn3Wjkd5jccffrw67w==
@@ -9193,6 +9183,14 @@ sc-formatter@^3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/sc-formatter/-/sc-formatter-3.0.2.tgz#9abdb14e71873ce7157714d3002477bbdb33c4e6"
   integrity sha512-9PbqYBpCq+OoEeRQ3QfFIGE6qwjjBcd2j7UjgDlhnZbtSnuGgHdcRklPKYGuYFH82V/dwd+AIpu8XvA1zqTd+A==
+
+scheduler@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.1.tgz#1a217df1bfaabaf4f1b92a9127d5d732d85a9591"
+  integrity sha512-VJKOkiKIN2/6NOoexuypwSrybx13MY7NSy9RNt8wPvZDMRT1CW6qlpF5jXRToXNHz3uWzbm2elNpZfXfGPqP9A==
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 schema-utils@^0.3.0:
   version "0.3.0"
@@ -9938,7 +9936,7 @@ styled-system@3.0.3:
   dependencies:
     prop-types "^15.6.2"
 
-styled-system@^2.3.2:
+styled-system@^2.2.5:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-2.3.6.tgz#a38c1ffa04a5c35adec46473984e463c48b16f7c"
   integrity sha512-lGAh/8tC70f5hBUD7w0UOWCKyOBK2AzzWKu9BGzqla/Yjx8PzrvaciA7uATbm493hXTfRrecSdLdrIUET5IYnA==
