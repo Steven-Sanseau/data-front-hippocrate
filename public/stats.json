@@ -1,0 +1,56 @@
+{
+  "assetsByChunkName": {
+    "component---src-pages-index-js": [
+      "component---src-pages-index-js-7f9083717d82bcbe0dbd.js",
+      "component---src-pages-index-js-7f9083717d82bcbe0dbd.js.map"
+    ],
+    "path---": [
+      "path----82e01d6e4cc54c8c385e.js",
+      "path----82e01d6e4cc54c8c385e.js.map"
+    ],
+    "component---src-layouts-index-js": [
+      "component---src-layouts-index-js-d72ad167d98c9bb96e37.js",
+      "component---src-layouts-index-js-d72ad167d98c9bb96e37.js.map"
+    ],
+    "component---src-pages-team-js": [
+      "component---src-pages-team-js-9fd7055b4bf0d6291b4b.js",
+      "component---src-pages-team-js-9fd7055b4bf0d6291b4b.js.map"
+    ],
+    "path---index": [
+      "path---index-a0e39f21c11f6a62c5ab.js",
+      "path---index-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "component---src-pages-presse-js": [
+      "component---src-pages-presse-js-ca4ffa75cdf0a2b01406.js",
+      "component---src-pages-presse-js-ca4ffa75cdf0a2b01406.js.map"
+    ],
+    "component---src-pages-404-js": [
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
+      "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
+    ],
+    "commons": [
+      "commons-8681f32cf643e297a76e.js",
+      "commons-8681f32cf643e297a76e.js.map"
+    ],
+    "path---404-html": [
+      "path---404-html-a0e39f21c11f6a62c5ab.js",
+      "path---404-html-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---team": [
+      "path---team-feab93aaa246cb82e29e.js",
+      "path---team-feab93aaa246cb82e29e.js.map"
+    ],
+    "app": [
+      "app-a8c77e80b43701292e1b.js",
+      "app-a8c77e80b43701292e1b.js.map"
+    ],
+    "path---404": [
+      "path---404-a0e39f21c11f6a62c5ab.js",
+      "path---404-a0e39f21c11f6a62c5ab.js.map"
+    ],
+    "path---presse": [
+      "path---presse-a0e39f21c11f6a62c5ab.js",
+      "path---presse-a0e39f21c11f6a62c5ab.js.map"
+    ]
+  }
+}
